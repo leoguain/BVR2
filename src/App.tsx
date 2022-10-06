@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import Topo from './components/Header';
+import logo from './liga_bvr_gt_branco.png';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
+      <Topo />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} alt="logo" />
         <p>
           Liga BVR
         </p>
