@@ -1,3 +1,13 @@
+body{
+  background-color: #282c34;
+  color: white;
+}
+
+.roda{
+  width: 50px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
 .logo{
   align-self: left;
   width: 100px;
@@ -9,7 +19,8 @@
   color: white;
   padding: 25px;
   align-items: center;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .App {
@@ -29,6 +40,7 @@
 
 .App-header {
   background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,4 +61,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  display: flex;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  align-items: center;
+  justify-content: center;
 }
