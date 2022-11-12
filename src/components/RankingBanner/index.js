@@ -4,9 +4,26 @@ import logoCampeonato from '../Assets/LogosCampeonatos/logoSilviaKupRed2022.png'
 import logoBvgtv from '../Assets/BVGtv logo.png';
 
 import CarregaTabela from '../CarregaTabela';
-import { Container, LinhaRanking, TopoRanking, CelulaRanking, LinhaPiloto } from './styles';
+import { Container, LinhaRanking, TopoRanking, CelulaRanking, LinhaPiloto, RankingButton } from './styles';
 
 const geralCampeonatoSilvia = [
+    {pos: '01', nome:'Gustavo Viaro', id: 'Gustavo Viaro', penal:'0', total:'60'},
+    {pos: '02', nome:'João Paulo Facci', id: 'JPFACCI_SPEEDBR', penal:'0', total:'50'},
+    {pos: '03', nome:'Fábian Viegas', id: 'FABIAN_SPEEDBR', penal:'0', total:'33'},
+    {pos: '04', nome:'Gerson Garcia', id: 'Gersão Hamilton', penal:'0', total:'33'},
+    {pos: '05', nome:'Fabiano Furini', id: 'FURINI_SPEEDBR', penal:'0', total:'33'},
+    {pos: '06', nome:'Yuri Demetrius', id: 'KMZ_YuriGrush', penal:'0', total:'18'},
+    {pos: '07', nome:'Kelvin Carvalho', id: 'KMZ-kelvin.C', penal:'0', total:'17'},
+    {pos: '08', nome:'Thiago Alves', id: 'Thiago Wolf', penal:'0', total:'15'},
+    {pos: '09', nome:'Ednaldo Martins', id: 'KMZ_Naldo', penal:'0', total:'13'},
+    {pos: '10', nome:'Cláudio Faria', id: 'Claudio Faria', penal:'0', total:'12'},
+    {pos: '11', nome:'Carlos Celso de Godoy', id: 'MF2_TattoBrown', penal:'0', total:'07'},
+    {pos: '12', nome:'Cristiano Dutra', id: 'CCGTBR_Cristiano', penal:'0', total:'07'},
+    {pos: '13', nome:'Luis Ferruthio', id: 'FERRUTH_SPEEDBR', penal:'0', total:'05'},
+    {pos: '14', nome:'Luan Muniz', id: 'Luan_mmuniz89', penal:'0', total:'00'},
+];
+
+const ultimaEtapaSilvia = [
     {pos: '01', nome:'Gustavo Viaro', id: 'Gustavo Viaro', e1:'30', e2:'0', e3:'0', e4:'0', e5: '0', e6:'0', e7:'0', e8:'0', penal:'0', total:'30'},
     {pos: '02', nome:'João Paulo Facci', id: 'JPFACCI_SPEEDBR', e1:'25', e2:'0', e3:'0', e4:'0', e5: '0', e6:'0', e7:'0', e8:'0', penal:'0', total:'25'},
     {pos: '03', nome:'Marco Antônio Soares', id: 'CRS_BillyBizzuca', e1:'21', e2:'0', e3:'0', e4:'0', e5: '0', e6:'0', e7:'0', e8:'0', penal:'0', total:'21'},
@@ -24,8 +41,65 @@ const geralCampeonatoSilvia = [
 ];
 
 const RankingBanner = () => {
+
+    const [isGeral, setGeral] = React.useState(true);
+
+    const handleB1 = () => {
+        setGeral(!isGeral);
+    };
+
+    const handleB2 = () => {
+        setGeral(!isGeral);
+    };
+
+
+    //{isGeral ? <GridGeral /> : null};
+
+
     return (
-        <Container silviaKup >
+         <Container silviaKup >
+            <TopoRanking >
+                <div>
+                    <img src={logoCampeonato} alt='Logo Campeonato' width='80px'/>
+                </div>
+                <div>
+                    Nissan Silvia KUP
+                    RANKING GERAL
+                </div>
+                <div>
+                    <img src={logoBvgtv} alt='Logo Campeonato' width='70px'/>
+                </div>
+            </TopoRanking>
+                
+            {geralCampeonatoSilvia.map((piloto) => (
+                <LinhaRanking>
+                    <CelulaRanking silviaKup>
+                        {piloto.pos}
+                    </CelulaRanking>
+                    <LinhaPiloto silviaKup>
+                        {piloto.nome}
+                    </LinhaPiloto>
+                    <CelulaRanking silviaKup inputBorder="3px 3px 10px 3px">
+                        {piloto.total}    
+                    </CelulaRanking>
+                </LinhaRanking>
+            ))}
+
+            <div>
+                <RankingButton onClick={handleB1} silviaKup>Ranking Geral</RankingButton>
+                <RankingButton onClick={handleB2} silviaKup>Última Etapa</RankingButton>
+            </div>
+
+        </Container>
+    )
+}
+
+
+const GridGeral = () => {
+    
+    return (
+    
+        <Container silviaKup>
                 <TopoRanking >
                     <div>
                         <img src={logoCampeonato} alt='Logo Campeonato' width='80px'/>
@@ -53,8 +127,17 @@ const RankingBanner = () => {
                         </CelulaRanking>
                     </LinhaRanking>
                 ))}
+
+                <div>
+                    <RankingButton onClick={handleB1} silviaKup>Ranking Geral</RankingButton>
+                    <RankingButton onClick={handleB2} silviaKup>Última Etapa</RankingButton>
+                </div>
+
         </Container>
+
     )
-}
+
+  };
+
 
 export default RankingBanner;

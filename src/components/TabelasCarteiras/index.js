@@ -5,11 +5,11 @@ import { Container, CColumn, CHeader, CData, CPiloto, CNome } from './styles';
 //import { Piloto } from '../Piloto';
 
 const pilotosSS = [
-    {nome:'Gustavo Viaro', id:'Gustavo Viaro'},
+    {nome:'Gustavo Viaro', id:'CCGTBR_Gustavo'},
     {nome:'Luis Ferruthio', id:'FERRUTH_SPEEDBR'},
     {nome:'João Paulo Facci', id:'JPFACCI_SPEEDBR'},
     {nome:'José Eduardo F Filho', id:'PCR_Dudu10'},
-    {nome:'Ronald Carvalho', id:'roonald_1'},
+    {nome:'Ronald Carvalho', id:'roonald_f1'},
     {nome:'Leonardo Guain', id:'leoguain'},
     {nome:'Murilo H da Silva', id:'MYTH_MuriloSilva'},
     {nome:'Eduardo Schaarschmidt', id:'DuduToretto'},
@@ -33,7 +33,7 @@ const pilotosA = [
     {nome:'Yuri Demetrius', id:'KMZ_YuriGrush'},
     {nome:'Cléber Carlos', id:'CLEBER_SPEEDBR'},
     {nome:'Luis Vilches', id:'Luisvilches'},
-    {nome:'Cláudio Faria', id:'CCGTBR_ClaudioFaria'},
+    {nome:'Cláudio Faria', id:'CCGTBR-c_faria'},
     {nome:'Marco Godoi', id:'Cel_God'},
     {nome:'Gustavo dos Santos', id:'Ghustaw'},
     {nome:'Leandro Borges', id:'Caua-1308'},
@@ -47,6 +47,7 @@ const pilotosA = [
     {nome:'Francisco da Silva', id:'ELEKTROEDD'},
     {nome:'Cristiano Dutra', id:'CCGTBR_Cristiano'},
     {nome:'Lucas Macam', id:'KMZ_Lucas'},
+    {nome:'Paulo Ramos', id:'Paulo_baiano27'},
 ];
 
 const pilotosB = [
@@ -57,8 +58,8 @@ const pilotosB = [
     {nome:'Walter dos Santos', id:'walter-wa42'},
     {nome:'Yuri Stolai', id:'Punhalkiller'},
     {nome:'Luciano Five', id:'lppfive'},
-    {nome:'Pedro Bernardo', id:'Petros'},
-    {nome:'Jonathan Diego', id:'-'},
+    {nome:'Pedro Bernardo', id:'Petros_pro'},
+    {nome:'Jonathan Diego', id:'E-Boss_Jonathan'},
     {nome:'Marcos André da Silva', id:'CCGTBR_Borges'},
     {nome:'Thiago Alves', id:'Thiago Wolf'},
     {nome:'Kelvin Carvalho', id:'KMZ-kelvin.C'},

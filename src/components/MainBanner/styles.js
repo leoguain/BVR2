@@ -10,8 +10,7 @@ const Container = styled.div`
     width: 400px;
     height:500px;
     align-self:center;
-    
-`
+`;
 /*border-radius:25px;
 padding: 10px;
   width: 300px;

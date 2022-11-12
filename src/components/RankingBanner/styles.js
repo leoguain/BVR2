@@ -77,3 +77,19 @@ export const LinhaPiloto = styled.div`
         font-weight: bold;
     `}
 `;
+
+export const RankingButton = styled.button`
+    border-radius:10px;
+    border: solid #c7c7c7;
+    background-color:#c7c7c7;
+    align-items: center;
+    height: 25px;
+    margin: 2px;
+    cursor: pointer;
+
+    ${props =>props.silviaKup && css`
+        background-color: #bc0202;
+        border: #bc0202;
+        color: white;
+    `}
+`;

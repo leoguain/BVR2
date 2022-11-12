@@ -3,6 +3,21 @@ body{
   color: white;
 }
 
+body::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+  background-color: #a9acaf;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #a9acaf;  /* creates padding around scroll thumb */
+}
+
+
 .roda{
   width: 50px;
   animation: App-logo-spin infinite 20s linear;
@@ -80,3 +95,4 @@ body{
   align-items: center;
   justify-content: center;
 }
+

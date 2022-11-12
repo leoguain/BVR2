@@ -5,9 +5,7 @@ import Container from './styles';
 
 const MainBanner = () => {
     return (
-        <Container  >
-
-        </Container>
+        <Container />
     )
 }
 

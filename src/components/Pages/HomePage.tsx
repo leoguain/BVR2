@@ -6,6 +6,9 @@ import MiniBanner2 from '../MiniBanner2';
 import { Container, HPBottom, HPColumn, HPTitle, LastVideo } from './styles.js';
 
 import YoutubeEmbed from "../YoutubeEmbed";
+import PostBox from '../PostBox';
+
+
 
 
 const MainPage = () => {
@@ -18,15 +21,14 @@ const MainPage = () => {
                 <RankingBanner />    
             </HPColumn>
             <HPColumn>
+                <PostBox sizeType="NewsBox"/><br></br>
                 <HPTitle>
-                    Última Corrida - 06/10/22
+                    Última Corrida - 20/10/22
                 </HPTitle>
-                <YoutubeEmbed embedId="H7RzZg_culQ" />
+                <YoutubeEmbed embedId="KjrGtETh2lY" />
                 <HPBottom>
                     Acompanhe ao vivo, às quintas, na BVGtv!
                 </HPBottom>
-                <br></br>
-                <MiniBanner2 />
             </HPColumn>
         </Container>
     )

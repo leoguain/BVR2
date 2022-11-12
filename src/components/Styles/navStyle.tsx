@@ -15,8 +15,9 @@ export const NavbarContainer = styled("nav")<NavbarProps>`
     align-items: center;
     justify-content: space-between;
 
-    @media(min-width:700px){
+    @media(min-width:768px){
         height: 100px;
+        background-color: black;
         flex-direction: column;
     }
 `;
@@ -27,6 +28,8 @@ export const NavbarContainer = styled("nav")<NavbarProps>`
      justify-content: space-between;
      
      margin: 20px;
+
+     
 `;
 
  export const NavbarLink = styled(Link)`
@@ -45,7 +48,7 @@ export const NavbarContainer = styled("nav")<NavbarProps>`
         color: green;
     }
     
-    @media(max-width: 700px) {
+    @media(max-width: 768px) {
         display: none;
 }`;
 
@@ -58,7 +61,7 @@ export const ButtonLink = styled("button")`
     font-size: 45px;
     cursor: pointer;
     
-    @media(min-width: 700px) {
+    @media(min-width: 768px) {
         display: none;`;
 
 
@@ -73,7 +76,7 @@ export const ExtendedNavbar = styled("div")`
     align-self: center
     justify-content: space between;
 
-    @media (min-width:700px){
+    @media (min-width:768px){
         display: none;
 }`;
 

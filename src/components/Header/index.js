@@ -28,20 +28,23 @@ const Topo = () => {
                         <img src={roda} alt="roda girando" className='roda' to="/home"/>
                         <img src={logo} alt="logo BVR" className='logo' to="/home"/>
                     </NavbarLink>
+                    <NavbarLink className="nav-link active" to="/campeonatos">
+                        Campeonatos
+                    </NavbarLink>
                     <NavbarLink className="nav-link active" to="/carteiras">
                         Carteiras
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/carteiras">
-                        Eventos
+                    <NavbarLink className="nav-link active" to="/campeoes">
+                        Hall da Fama
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/carteiras">
+                    <NavbarLink className="nav-link active" to="/cdnoticias">
                         Inscrições
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/carteiras">
-                        Mídias
+                    <NavbarLink className="nav-link active" to="/noticias">
+                        Notícias
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/campeonatos">
-                        Rankings
+                    <NavbarLink className="nav-link active" to="/pilotos">
+                        Pilotos
                     </NavbarLink>
                 
 
@@ -56,25 +59,28 @@ const Topo = () => {
                 
                 {extendNavbar && (
                     <ExtendedNavbar>
-                    <NavbarLinkExtended className="nav-link active" to="/home">
-                        <img src={roda} alt="roda girando" className='roda' to="/home"/>
-                        <img src={logo} alt="logo BVR" className='logo' to="/home"/>
-                    </NavbarLinkExtended>
-                    <NavbarLinkExtended className="nav-link" to="/carteiras">
-                        Carteiras
-                    </NavbarLinkExtended>
-                    <NavbarLinkExtended className="nav-link" to="/carteiras">
-                        Eventos
-                    </NavbarLinkExtended>
-                    <NavbarLinkExtended className="nav-link" to="/carteiras">
-                        Inscrições
-                    </NavbarLinkExtended>
-                    <NavbarLinkExtended className="nav-link" to="/carteiras">
-                        Mídias
-                    </NavbarLinkExtended>
-                    <NavbarLinkExtended className="nav-link" to="/campeonatos">
-                        Rankings
-                    </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link active" to="/home">
+                            <img src={roda} alt="roda girando" className='roda' to="/home"/>
+                            <img src={logo} alt="logo BVR" className='logo' to="/home"/>
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/campeonatos">
+                            Campeonatos
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/carteiras">
+                            Carteiras
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/campeoes">
+                            Hall da Fama
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/carteiras">
+                            Inscrições
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/noticias">
+                            Notícias
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/pilotos">
+                            Pilotos
+                        </NavbarLinkExtended>
                     </ExtendedNavbar>
                 )}
                                

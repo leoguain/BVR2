@@ -1,4 +1,3 @@
-
 import styled, {css} from 'styled-components'
 
 export const Container = styled.div`
@@ -8,22 +7,23 @@ export const Container = styled.div`
     border-radius:10px;
     min-height: 70vh;
     justify-content: center;
+    align-self: center;
 
     @media(max-width: 700px) {
-        width: 100%
         flex-direction: column;
-    }`
+        
+    }`;
 
 export const CColumn = styled.div`
     display:flex;
-    background-color: ${props => props.inputColor || "yellow"};
+    background-color: ${props => props.inputColor || "black"};
     border-radius:10px;
     align-self: center;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     margin: 20px;
-`
+`;
 
 export const CHeader = styled.div`
     display:flex;
@@ -33,22 +33,18 @@ export const CHeader = styled.div`
     align-items: center;
     align-self: center;
     justify-content: center;
-`
+`;
 
 export const CData = styled.div`
     display:flex;
-    background-color: ${props => props.inputColor || "orange"};
+    background-color: ${props => props.inputColor || "black"};
     border-radius: 0px 0px 10px 10px ;
     align-items: top;
     align-self: center;
     flex-flow: row wrap;
     justify-content: center;
     
-    @media(max-width: 700px) {
-        width: 500px
-        flex-direction: column;
-    }
-`
+`;
 //background: url(${logoSilviaKup2022}); 
 export const CButton = styled.button`
     
@@ -69,26 +65,22 @@ export const CButton = styled.button`
     display: flex;
     cursor: pointer;
 
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-
-  &:hover {
-    ${CButton} {
+    &:hover {
         border:solid 3px lightgreen;
     }
-  }
-
-  &:focus {
-    ${CButton} {
+    
+    &:focus {
         border:solid 3px white;
     }
-  }
-
-  &:active{
-    ${CButton} {
+    
+    &:active{
         background-color: #282c34;
         border:solid 3px green;
     }
-}`;
+
+    @media(max-width: 768px) {
+        width: 100px;
+        height:120px;
+        margin: 2px;
+    }
+`;

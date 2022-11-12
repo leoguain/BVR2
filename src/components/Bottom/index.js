@@ -6,13 +6,17 @@ import emailLogo from '../Assets/EmailCinza.png';
 import whatsLogo from '../Assets/WhatsCinza.png';
 import youtubeLogo from '../Assets/YtCinza.png';
 
+
 import {Container, LinkContainer} from '../Styles/styles.js'
 
 const Rodape = () => {
     return (
         <Container >
                 <LinkContainer>
-                    <img src={emailLogo} alt="logo E-mail" width='40px'/>
+                
+    
+                        <img src={emailLogo} alt="logo E-mail" width='40px'/>
+       
                     <a href="https://facebook.com/ligabvr" target="_blank" rel="noreferrer">
                         <img src={facebookLogo} alt="logo Facebook" width='40px'/>
                     </a>
