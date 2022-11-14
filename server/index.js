@@ -1,8 +1,11 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
 const app = express();
 const mysql = require("mysql");
+const cors = require("cors");
+
+const bodyParser = require("body-parser");
+
+
 
 const db = mysql.createPool ({
     host: '127.0.0.1',
@@ -12,41 +15,38 @@ const db = mysql.createPool ({
 })
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.json());
+//app.use(bodyParser.urlencoded({extended: true}))
 
-app.get("/", (req, res) => {
-    res.send("1 tstss");
+/*app.get("/", (req, res) => {
+    res.send("Ei vc");
+});*/
+
+app.post("/newspost", (req, res) => {
+
+    const {title} =req.body.tituloNot;
+    const {date} =req.body.dataNot;
+    const {text} =req.body.textoNot;
+    const {image} =req.body.imageNot;
+    const {url} =req.body.urlNot;
+
+    let SQL = 
+        "INSERT INTO noticias_not VALUES (null,?,?,?,?,?)";
+
+        db.query(SQL, [title, date, text, image, url], (err, result) => {
+            console.log(err);
+        })
 });
 
-app.get("/api/drivers", (req, res) => {
+app.get("/getnews", (req, res) => {
 
-    res.send("Olá");
-    const sqlData = "SELECT * FROM pilotos_pil";
-    db.query(sqlData, (err, result)=> {
+    let SQL = 
+        "SELECT * FROM noticias_not ORDER BY not_IdNoticia_int DESC"
 
-        console.log(result);
-        console.log(err);
-    })
-
-});
-
-app.get("/api/insert", (req, res) => {
-
-    /*const tituloNot = req.body.tituloNot
-    const dataNot = req.body.dataNot
-    const textoNot = req.body.textoNot
-    const imgNot = req.body.imgNot
-    const urlNot  = req.body.urlNot*/
-
-    const sqlInsert = "INSERT INTO noticias_not VALUES (?,?,?,?,?);";
-    db.query(sqlInsert, ["Teste post", 
-                         "07/11/2022", 
-                         "Hoje foi dia de corrida sdalksajfl asdal asç", 
-                         "p_0001.png", 
-                         "www.google.com"], (err, result)=> {
-        res.send("Insert OK");
-        console.log(sqlInsert);
-    })
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
 });
 
 app.listen(3001, ()=>{

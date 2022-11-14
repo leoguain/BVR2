@@ -7,25 +7,27 @@ import axios from 'axios';
 const Noticias = () => {
 
     const [tituloNoticia, setTituloNoticia] = useState(''); 
-    const [dataNoticia, setDataNoticia] = useState('30/10/2022'); 
+    const [dataNoticia, setDataNoticia] = useState('14/11/2022'); 
     const [textoNoticia, setTextoNoticia] = useState(''); 
     const [imagemNoticia, setImagemNoticia] = useState('../Assets/logo.jpg'); 
     const [urlNoticia, setUrlNoticia] = useState(''); 
 
     const enviarNoticia = () => {
 
+        console.log(tituloNoticia);
+        console.log(dataNoticia);
+        console.log(textoNoticia);
+        console.log(imagemNoticia);
         console.log(urlNoticia);
 
-        Axios.post("http://localhost:3001/api/insert", {tituloNot: tituloNoticia, 
+        Axios.post("http://localhost:3001/newspost", {tituloNot: tituloNoticia, 
                                                         dataNot: dataNoticia, 
-                                                        textoNot:textoNoticia, 
-                                                        imgNot: imagemNoticia, 
+                                                        textoNot: textoNoticia, 
+                                                        imageNot: imagemNoticia, 
                                                         urlNot: urlNoticia}).then(()=>{
                                                             alert("Enviado com sucesso");
                                                         });
     }
-
-    //Axios.get("http://localhost:3001/api/getData")
 
     return (
         
