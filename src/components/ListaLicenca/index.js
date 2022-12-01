@@ -23,10 +23,7 @@ export default function ListaLicenca(props) {
 
     let listaCarteiras = [cSS,cS,cA,cB];
 
-    console.log(listaCarteiras);
-    console.log(cS[0].carteira);
-    console.log(cA[0].carteira);
-    console.log(cB[0].carteira);
+
 
 
     return (
