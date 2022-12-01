@@ -120,10 +120,7 @@ export const GetLicencas = () => {
             <BVR_h3>Acompanhe o nível de carteira de cada piloto da BVR.</BVR_h3>
             
             <CentralContainerH>
-                <ListaLicenca listCarteiras={cSS}/>
-                <ListaLicenca listCarteiras={cS}/>
-                <ListaLicenca listCarteiras={cA}/>
-                <ListaLicenca listCarteiras={cB}/>
+                <ListaLicenca listLic={licencas} SetListLic={setLicencas}/>
             </CentralContainerH>
         </MainContainerV>
     )

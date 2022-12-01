@@ -3,15 +3,38 @@ import {CColumn, CHeader, CData, CPiloto, CNome, BVR_h2 } from './styles.js';
 
 export default function ListaLicenca(props) {
 
-    const licenca = props.listCarteiras[0].carteira;
-    const cor = props.listCarteiras[0].cor;
+    console.log(props.listLic);
+
+    let cSS = props.listLic.filter((piloto) => {
+        return piloto.carteira === 'SS';
+    })
+
+    let cS = props.listLic.filter((piloto) => {
+        return piloto.carteira === 'S';
+    })
+
+    let cA = props.listLic.filter((piloto) => {
+        return piloto.carteira === 'A';
+    })
+
+    let cB = props.listLic.filter((piloto) => {
+        return piloto.carteira === 'B';
+    })
+
+    let listaCarteiras = [cSS,cS,cA,cB];
+
+    console.log(listaCarteiras);
+    console.log(cS[0].carteira);
+    console.log(cA[0].carteira);
+    console.log(cB[0].carteira);
+
 
     return (
         <CColumn>
-            <CHeader inputColor={cor}>
-                <BVR_h2>Carteira {licenca}</BVR_h2>
+            <CHeader inputColor={cSS[0].cor}>
+                <BVR_h2>Carteira {cSS[0].carteira}</BVR_h2>
             </CHeader>
-            <CData inputColor={cor}>
+            <CData inputColor={cSS[0].cor}>
                 <CPiloto inputBottomBorder="none" 
                         inputWidth="260px" 
                         inputBorder="10px" 
@@ -23,7 +46,7 @@ export default function ListaLicenca(props) {
                         ID
                     </CNome>
                 </CPiloto>
-                    {props.listCarteiras.map((piloto) => (
+                    {cSS.map((piloto) => (
                         <CPiloto>
                             <CNome>
                                 {piloto.nome}
@@ -37,3 +60,29 @@ export default function ListaLicenca(props) {
 
 }
 
+/*
+<CHeader inputColor="#fff">
+                <BVR_h2>Carteira {licenca}</BVR_h2>
+            </CHeader>
+            <CData inputColor="#fff">
+                <CPiloto inputBottomBorder="none" 
+                        inputWidth="260px" 
+                        inputBorder="10px" 
+                        inputColor="#282828">
+                    <CNome>
+                        Piloto
+                    </CNome>
+                    <CNome>
+                        ID
+                    </CNome>
+                </CPiloto>
+                    {listaCarteiras.map((piloto) => (
+                        <CPiloto>
+                            <CNome>
+                                {piloto.nome}
+                            </CNome>
+                            {piloto.idPsn}
+                        </CPiloto>
+                    ))}
+            </CData>
+            */
