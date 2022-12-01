@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import banner1 from '../Assets/silvia.jpg';
+import banner1 from '../Assets/Campeoes/campSilvia22.jpg';
 
 const Container = styled.div`
     background: url(${banner1});

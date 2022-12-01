@@ -21,11 +21,11 @@ const MainPage = () => {
                 <RankingBanner />    
             </HPColumn>
             <HPColumn>
-                <PostBox sizeType="NewsBox"/><br></br>
+                <PostBox sizeType="NewsBox" accessType = "default"/><br></br>
                 <HPTitle>
                     Última Corrida - 20/10/22
                 </HPTitle>
-                <YoutubeEmbed embedId="KjrGtETh2lY" />
+                <YoutubeEmbed embedId="XCa8CoaMpqE" />
                 <HPBottom>
                     Acompanhe ao vivo, às quintas, na BVGtv!
                 </HPBottom>

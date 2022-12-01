@@ -1,5 +1,41 @@
 import styled, {css} from 'styled-components'
 
+export const BVR_h2 = styled.h2`
+        font-size: 1.25em;
+        font-weight: 600;
+        color: #fff;
+        line-height: 0.4em;
+        margin: 10px;
+`;
+
+export const BVR_h3 = styled.h3`
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    line-height: 0.1em;
+    margin: 10px;
+`;
+
+export const BVR_a = styled.a`
+    color: #45f3ff;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover{
+        color: "#2AC868";
+    }
+
+    &:active{
+        color: "#2AC868";
+    }
+
+    &:focus{
+        color: "#2AC868";
+    }
+`;
+
+
+
 export const Container = styled.div`
     display: flex;
     max-height: 500px;
@@ -86,18 +122,20 @@ export const TextBox = styled.div `
 export const LinkBox = styled.div`
     height:25px;
     font-size: 16px;
+    
 `;
 
-export const CButton = styled.button`
-    background-color: #bc0202;
+export const EditButton = styled.button`
+    background: #149B49;
+    font-size: 1em;
+    width: 100px;
+    height: 30px;
     border-radius: 5px;
+    border: solid #149B49 3px;
     color: #fff;
-    border: solid 1px #bc0202;
     cursor: pointer;
-    margin: 5px;
-    align-self: right;
 
-    :hover {
-        border: solid 1px #fff;
+    :hover{
+            border: solid #fff 2px;
     }
 `;

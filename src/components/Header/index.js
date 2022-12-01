@@ -34,10 +34,13 @@ const Topo = () => {
                     <NavbarLink className="nav-link active" to="/carteiras">
                         Carteiras
                     </NavbarLink>
+                    <NavbarLink className="nav-link active" to="/documentos">
+                        Documentos
+                    </NavbarLink>
                     <NavbarLink className="nav-link active" to="/campeoes">
                         Hall da Fama
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/cdnoticias">
+                    <NavbarLink className="nav-link active" to="/admnoticias">
                         Inscrições
                     </NavbarLink>
                     <NavbarLink className="nav-link active" to="/noticias">
@@ -46,7 +49,9 @@ const Topo = () => {
                     <NavbarLink className="nav-link active" to="/pilotos">
                         Pilotos
                     </NavbarLink>
-                
+                    <NavbarLink className="nav-link active" to="/recordes">
+                        Recordes
+                    </NavbarLink>
 
                     <ButtonLink
                     onClick={() => {
@@ -69,10 +74,13 @@ const Topo = () => {
                         <NavbarLinkExtended className="nav-link" to="/carteiras">
                             Carteiras
                         </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/documentos">
+                            Documentos
+                        </NavbarLinkExtended>
                         <NavbarLinkExtended className="nav-link" to="/campeoes">
                             Hall da Fama
                         </NavbarLinkExtended>
-                        <NavbarLinkExtended className="nav-link" to="/carteiras">
+                        <NavbarLinkExtended className="nav-link" to="/admnoticias">
                             Inscrições
                         </NavbarLinkExtended>
                         <NavbarLinkExtended className="nav-link" to="/noticias">
@@ -80,6 +88,9 @@ const Topo = () => {
                         </NavbarLinkExtended>
                         <NavbarLinkExtended className="nav-link" to="/pilotos">
                             Pilotos
+                        </NavbarLinkExtended>
+                        <NavbarLinkExtended className="nav-link" to="/recordes">
+                            Recordes
                         </NavbarLinkExtended>
                     </ExtendedNavbar>
                 )}

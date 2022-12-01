@@ -1,12 +1,8 @@
-import React from 'react'
-import TabelasCarteiras from '../TabelasCarteiras';
-import { Container } from './styles.js';
+import { GetLicencas } from '../../resultados';
 
 const Carteiras = () => {
     return (
-        <Container >
-            <TabelasCarteiras />
-        </Container>
+        <GetLicencas/>
     )
 }
 

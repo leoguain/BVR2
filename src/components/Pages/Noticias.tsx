@@ -7,7 +7,7 @@ const Noticias = () => {
     return (
         <div>
             <p>Histórico de Notícias</p>
-            <PostBox sizeType="NewsPage"/>
+            <PostBox sizeType="NewsPage" accessType = "default"/>
         </div>
     )
 }

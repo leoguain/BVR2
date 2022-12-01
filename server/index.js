@@ -24,17 +24,15 @@ app.use(express.json());
 
 app.post("/newspost", (req, res) => {
 
-    const {title} =req.body.tituloNot;
-    const {date} =req.body.dataNot;
-    const {text} =req.body.textoNot;
-    const {image} =req.body.imageNot;
-    const {url} =req.body.urlNot;
+    const {title, date, text, image, url} = req.body;
 
     let SQL = 
         "INSERT INTO noticias_not VALUES (null,?,?,?,?,?)";
 
         db.query(SQL, [title, date, text, image, url], (err, result) => {
             console.log(err);
+
+            res.send(result);
         })
 });
 
@@ -42,6 +40,83 @@ app.get("/getnews", (req, res) => {
 
     let SQL = 
         "SELECT * FROM noticias_not ORDER BY not_IdNoticia_int DESC"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getdrivers", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_drivers_data"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getdocs", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM documentos_doc ORDER BY doc_TipoDocumento_str, doc_IdDocumento_int DESC"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getrecordsc", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_records_c"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getrecordst", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_records_t"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getlastgerald", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_last_results_geral_d"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getlastgeral", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_last_results_geral"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getlicenses", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_drivers_licenses"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);

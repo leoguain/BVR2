@@ -8,7 +8,7 @@ import logoBMW2021 from './components/Assets/LogosCampeonatos/logoBMWB2021.png';
 import logoRedware2021 from './components/Assets/LogosCampeonatos/logoRedware2021.png';
 import logoPorsche2021 from './components/Assets/LogosCampeonatos/logoPorscheCup2021.png';
 
-import campSilviaKup2022 from './components/Assets/Campeoes/campSilvia22.jpg';
+import campSilvia2022 from './components/Assets/Campeoes/campSilvia22.jpg';
 import campNascar2022 from './components/Assets/Campeoes/campNascar22.jpg';
 import campMazda2022 from './components/Assets/Campeoes/campMazda22.jpg';
 import campGT32022 from './components/Assets/Campeoes/campGT3.jpg';
@@ -34,7 +34,7 @@ export type CampeonatoProps = {
 
 export const campeonatos = 
 [
-    /*{
+    {
         id: "silvia22", 
         title: "Nissan Silvia KUP 2022", 
         logo: logoSilviaKup2022,
@@ -58,7 +58,7 @@ export const campeonatos =
              pontos:[{et:"1", pt:"20"},{et:"2", pt:"17"},{et:"3", pt:"20"},
              {et:"4", pt:"20"},{et:"5", pt:"0"},{et:"6", pt:"0"},]},
         ],
-    },*/
+    },
     {
         id: "nascar22", 
         title: "Nascar Series Cup 2022", 
