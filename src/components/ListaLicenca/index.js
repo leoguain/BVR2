@@ -21,38 +21,76 @@ export default function ListaLicenca(props) {
         return piloto.carteira === 'B';
     })
 
-    let listaCarteiras = [cSS,cS,cA,cB];
+
+    const corSS = cSS[0]?.cor;
+    const corS = cS[0]?.cor;
+    const corA = cA[0]?.cor;
+    const corB = cB[0]?.cor;
 
 
+    const ArrayCarteiras = [cSS,cS,cA,cB]
 
+    console.log(ArrayCarteiras)
 
     return (
-        <CColumn>
-            <CHeader inputColor={cSS[0].cor}>
-                <BVR_h2>Carteira {cSS[0].carteira}</BVR_h2>
-            </CHeader>
-            <CData inputColor={cSS[0].cor}>
-                <CPiloto inputBottomBorder="none" 
-                        inputWidth="260px" 
-                        inputBorder="10px" 
-                        inputColor="#282828">
-                    <CNome>
-                        Piloto
-                    </CNome>
-                    <CNome>
-                        ID
-                    </CNome>
-                </CPiloto>
-                    {cSS.map((piloto) => (
-                        <CPiloto>
-                            <CNome>
-                                {piloto.nome}
-                            </CNome>
-                            {piloto.idPsn}
-                        </CPiloto>
-                    ))}
-            </CData>
-        </CColumn>
+
+        <><CColumn>
+        <CHeader inputColor={corSS}>
+            <BVR_h2>Carteira S</BVR_h2>
+        </CHeader>
+        <CData inputColor={corSS}>
+            <CPiloto inputBottomBorder="none" 
+                    inputWidth="260px" 
+                    inputBorder="10px" 
+                    inputColor="#282828">
+                <CNome>
+                    Piloto
+                </CNome>
+                <CNome>
+                    ID
+                </CNome>
+            </CPiloto>
+                {cSS.map((piloto) => (
+                    <CPiloto>
+                        <CNome>
+                            {piloto.nome}
+                        </CNome>
+                        {piloto.idPsn}
+                    </CPiloto>
+                ))}
+        </CData>
+    </CColumn>
+    <CColumn>
+        <CHeader inputColor={corS}>
+            <BVR_h2>Carteira S</BVR_h2>
+        </CHeader>
+        <CData inputColor={corS}>
+            <CPiloto inputBottomBorder="none" 
+                    inputWidth="260px" 
+                    inputBorder="10px" 
+                    inputColor="#282828">
+                <CNome>
+                    Piloto
+                </CNome>
+                <CNome>
+                    ID
+                </CNome>
+            </CPiloto>
+                {cS.map((piloto) => (
+                    <CPiloto>
+                        <CNome>
+                            {piloto.nome}
+                        </CNome>
+                        {piloto.idPsn}
+                    </CPiloto>
+                ))}
+        </CData>
+    </CColumn></>
+    
+
+        
+
+        
     );
 
 }

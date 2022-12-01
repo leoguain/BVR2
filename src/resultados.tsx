@@ -98,22 +98,6 @@ export const GetLicencas = () => {
             });
     },[]);
 
-    let cSS = licencas.filter((piloto) => {
-        return piloto.carteira === 'SS';
-    })
-
-    let cS = licencas.filter((piloto) => {
-        return piloto.carteira === 'S';
-    })
-
-    let cA = licencas.filter((piloto) => {
-        return piloto.carteira === 'A';
-    })
-
-    let cB = licencas.filter((piloto) => {
-        return piloto.carteira === 'B';
-    })
-
     return (
         <MainContainerV>
             <BVR_h2>Carteiras BVR</BVR_h2>
