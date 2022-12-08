@@ -3,54 +3,19 @@ import fundoCarbon from '../Assets/carbon.jpg';
 
 
 //background: url(${fundoCarbon});
-export const BVR_h2 = styled.h2`
-        font-size: 1em;
-        font-weight: 700;
-        color: ${props => props.inputFontColor || "white"};
-        line-height: 1.1em;
-`;
 
-export const BVR_h3 = styled.h3`
-    font-size: 1em;
-    font-weight: 600;
-    color: ${props => props.inputFontColor || "white"};
-    line-height: 1.1em;
-`;
-
-export const BVR_span = styled.span`
-    font-size: 0.8em;
-    line-height: 0.9em;
-`;
-
-export const BVR_a = styled.a`
-    color: #45f3ff;
-    margin-left: 10px;
-
-    &:hover{
-        color: "#2AC868";
-    }
-
-    &:active{
-        color: "#2AC868";
-    }
-
-    &:focus{
-        color: "#2AC868";
-    }
-`;
-
-export const MainContainer = styled.div`
+export const Container = styled.div`
     display: flex;
-    background-color: ${props => props.inputColor || "#e9e9e9"};
-    color: ${props => props.inputFontColor || "white"};
+    background-color: black;
     border-radius:10px;
     width: 400px;
-    min-height: 70vh;
+    min-height: 50vh;
     flex-direction: column;
     justify-content: top;
+    gap:10px;
+    padding-bottom: 20px;
 
     ${props =>props.silviaKup && css`
-        background: none;
         background-color: #e9e9e9;
         color: #bc0202;
         font-weight: bold;
@@ -59,7 +24,7 @@ export const MainContainer = styled.div`
 
 export const TopoRanking = styled.div`
     display:flex;
-    height: 70px;
+    height: 100px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
@@ -69,24 +34,22 @@ export const TopoRanking = styled.div`
 
 export const LinhaRanking = styled.div`
     display:flex;    
-    height: 22px;
+    height: 25px;
     width: 330px;
     align-self: center;
     align-items: center;
-    margin:3px;
     justify-content: separate-between;
 `;
 
 export const CelulaRanking = styled.div`
     display:flex;  
-    border-radius: ${props => props.inputBorder || "8px 1px 1px 1px"};
+    border-radius: ${props => props.inputBorder || "10px 3px 3px 3px"}; ;
     height: 16px;
     width: 50px;
     background-color: ${props => props.inputColor || "red"};
-    color: ${props => props.inputFontColor || "white"};
     align-items: center;
     justify-content: center;
-    padding:5px;
+    padding:3px;
     font-size: 16px;
     font-weight: normal;
 
@@ -99,22 +62,34 @@ export const CelulaRanking = styled.div`
 
 export const LinhaPiloto = styled.div`
     display:flex;    
-    background-color: ${props => props.inputColor || "red"};
-    height: 22px;
+    background-color: #282c34;
+    height: 20px;
     width: 300px;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
     padding-left: 10px;
+
+    ${props =>props.silviaKup && css`
+        background: none;
+        background-color: #c7c7c7;
+        color: #bc0202;
+        font-weight: bold;
+    `}
 `;
 
 export const RankingButton = styled.button`
     border-radius:10px;
-    border: solid;
-    background-color: ${props => props.inputColor || "red"};
+    border: solid 3px #c7c7c7;
+    background-color:#c7c7c7;
     align-items: center;
-    height: 25px;
-    margin: 2px;
+    height: 30px;
+    margin: 5px;
     cursor: pointer;
-`;
 
+    ${props =>props.silviaKup && css`
+        background-color: #bc0202;
+        border: #bc0202;
+        color: white;
+    `}
+`;

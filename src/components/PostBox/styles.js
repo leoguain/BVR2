@@ -11,6 +11,7 @@ export const Container = styled.div`
 
     @media(max-width: 768px) {
         max-height: none;
+    }
 `;
 
 export const ContainerBox = styled.div`
@@ -20,7 +21,7 @@ export const ContainerBox = styled.div`
     align-self: center;
     color: white;
     width: 360px;
-    height:220px;
+    height:250px;
     padding: 10px;
     overflow: auto;
 
@@ -40,7 +41,6 @@ export const ContainerNoticia = styled.div`
 
 export const ImageBox = styled.div `
     background-color: green;
-    align-itens: center;
     justify-content: center;
     width: 100px;
     height:100px;
@@ -49,7 +49,6 @@ export const ImageBox = styled.div `
 export const DateBox = styled.div `
     background-color: #149B49;
     border-radius: 10px 20px 0px 0px;
-    align-itens: center;
     justify-content: center;
     margin-left:10px;
     width: 150px;
@@ -58,7 +57,6 @@ export const DateBox = styled.div `
 `;
 
 export const ContentBox = styled.div `
-
     border-radius:10px;
     flex-direction: column;
     background-color: #5b5b5b;

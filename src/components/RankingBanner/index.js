@@ -1,41 +1,30 @@
-import React, {useState, useCallback} from 'react';
-import { UltimoResultadoGeralD } from '../../resultados';
+import {useState, useCallback} from 'react';
+import { GetUltimoResultado } from '../../resultados';
 
-import CarregaTabela from '../CarregaTabela';
 import { Container, RankingButton } from './styles';
 
 const RankingBanner = () => {
 
-/*    const [activeCup, setActiveCup] = useState(campeonatos[0]);
-    const handleCupClick = useCallback((campeonato)=>{
+    const [rankingType, setRankingType] = useState("Geral");
+    const handleCupClick = useCallback((rankingType)=>{
         
-        setActiveCup(campeonato);
-
+        setRankingType(rankingType);
+        
     }, [])
-    {activeCup && <RankingCampeonatoDetalhado {...activeCup}/>}*/
-
-
-    const [tipoBanner, setTipo] = useState('Geral');
-
-    const handleB1 = () => {
-        setTipo('Geral');
-        console.log({tipoBanner});
-    };
-
-    const handleB2 = () => {
-        setTipo('UltimaEtapa');
-        console.log({tipoBanner});
-    };
 
     return (
 
          <Container>
 
-            <UltimoResultadoGeralD/>
+            {rankingType && <GetUltimoResultado rankingType={rankingType}/>}
 
             <div>
-                <RankingButton onClick={handleB1} silviaKup>Ranking Geral</RankingButton>
-                <RankingButton onClick={handleB2} silviaKup>Última Etapa</RankingButton>
+                <RankingButton onClick={()=>{
+                                        handleCupClick("Geral");
+                                    }} silviaKup>Ranking Geral</RankingButton>
+                <RankingButton onClick={()=>{
+                                        handleCupClick("Etapa");
+                                    }} silviaKup>Última Etapa</RankingButton>
             </div>
 
         </Container>

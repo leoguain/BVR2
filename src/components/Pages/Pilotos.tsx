@@ -1,9 +1,7 @@
-import { GetPilotos } from '../../resultados';
+import { GetPilotos } from "../../resultados";
 
 const Pilotos = () => {
-    return (
-        <GetPilotos />
-    )
-}
+  return <GetPilotos />;
+};
 
 export default Pilotos;

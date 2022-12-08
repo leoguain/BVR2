@@ -1,26 +1,22 @@
-import React from 'react';
 import { format, parse, differenceInYears } from 'date-fns'
 import { BVR_h1, BVR_h2, BVR_h3, BVR_span, PCard, PContainer, PConteudo, PDados, PRanking, PDetalhes, PPosicoes, PImage, PImage2, PImgBox, PLine, PPosicao, PBox } from './styles.js';
 
-import image from "../Assets/Pilotos/genericDriver.jpg";
 
 export default function Piloto(props) {
 
     const date = parse(props.dataNascimento, "dd/MM/yyyy", new Date());
     const age = differenceInYears(new Date(), date);
-    const urlFoto = "../../../public/" + props.foto;
+    const urlFoto = "/drivers/" + props.foto;
 
     const fotoPiloto = new Image();   // Create new img element
     fotoPiloto.src = "../Assets/Pilotos/genericDriver.jpg";
-
-    console.log(fotoPiloto)
     
     return (
         <PContainer>
                 <PCard>
                     <PLine />
                     <PImgBox className="ImgBox">
-                        <PImage  src={image}  />
+                        <PImage  src={urlFoto}  />
                     </PImgBox>
 
                     <PRanking className="Ranking">

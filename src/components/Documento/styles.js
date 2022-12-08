@@ -24,7 +24,7 @@ export const BVR_h2 = styled.h2`
 
 export const BVR_h3 = styled.h3`
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     line-height: 0.1em;
     margin: 10px;

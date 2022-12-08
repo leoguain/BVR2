@@ -4,13 +4,6 @@ import Axios from 'axios';
 import { NoticiaProps, noticias as noticiasArray } from '../../noticias';
 import { Container, ContainerBox, ImageBox, ContentBox, TitleBox, TextBox, DateBox, LinkBox, ContainerNoticia, CButton } from './styles';
 
-/*type NoticiaProps2 = {
-    doc_IdDocumento_int: number
-    doc_NomeDocumento_str: string
-    doc_TipoDocumento_str: string
-    doc_UrlDocumento_str: string
-}*/
-
 const PostBox = ({sizeType, accessType}) => {
 
     const [noticiasDb, setNoticiasDb] = useState([{}]);

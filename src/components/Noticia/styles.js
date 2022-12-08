@@ -40,30 +40,33 @@ export const Container = styled.div`
     display: flex;
     max-height: 500px;
     padding: 10px;
-    overflow: auto;
     flex-flow: row wrap;
     align-self: center;
     justify-content: center;
 
     @media(max-width: 768px) {
         max-height: none;
+    }
 `;
 
 export const ContainerBox = styled.div`
-    border-radius:10px;
     flex-direction: column;
     align-items: center;
     align-self: center;
-    color: white;
     width: 360px;
     height:220px;
     padding: 10px;
+    margin-bottom: 30px;
     overflow: auto;
 
     @media(max-width: 768px) {
+        margin-top: 50px;
         width: 360px
     }
 `;
+/*
+    background-color: #2B2B2B;
+    border: solid 1px #149B49;*/
 
 export const ContainerNoticia = styled.div`
     justify-content: center;
@@ -76,7 +79,6 @@ export const ContainerNoticia = styled.div`
 
 export const ImageBox = styled.div `
     background-color: green;
-    align-itens: center;
     justify-content: center;
     width: 100px;
     height:100px;
@@ -85,7 +87,7 @@ export const ImageBox = styled.div `
 export const DateBox = styled.div `
     background-color: #149B49;
     border-radius: 10px 20px 0px 0px;
-    align-itens: center;
+    align-items: center;
     justify-content: center;
     margin-left:10px;
     width: 150px;

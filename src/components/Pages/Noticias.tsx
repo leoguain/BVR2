@@ -1,15 +1,7 @@
-import React from 'react';
-import PostBox from '../PostBox';
-
-import { Container } from './styles.js';
+import { GetNoticias } from "../../resultados";
 
 const Noticias = () => {
-    return (
-        <div>
-            <p>Histórico de Notícias</p>
-            <PostBox sizeType="NewsPage" accessType = "default"/>
-        </div>
-    )
-}
+  return <GetNoticias sizeType="Page" accessType="Default" />;
+};
 
 export default Noticias;

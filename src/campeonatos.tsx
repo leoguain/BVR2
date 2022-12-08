@@ -8,16 +8,6 @@ import logoBMW2021 from './components/Assets/LogosCampeonatos/logoBMWB2021.png';
 import logoRedware2021 from './components/Assets/LogosCampeonatos/logoRedware2021.png';
 import logoPorsche2021 from './components/Assets/LogosCampeonatos/logoPorscheCup2021.png';
 
-import campSilvia2022 from './components/Assets/Campeoes/campSilvia22.jpg';
-import campNascar2022 from './components/Assets/Campeoes/campNascar22.jpg';
-import campMazda2022 from './components/Assets/Campeoes/campMazda22.jpg';
-import campGT32022 from './components/Assets/Campeoes/campGT3.jpg';
-import campGr42021 from './components/Assets/Campeoes/campGR4.jpg';
-import campToyota2021 from './components/Assets/Campeoes/campToyota.jpg';
-import campBMW2021 from './components/Assets/Campeoes/campBMW.jpg';
-import campRedware2021 from './components/Assets/Campeoes/campGT500.jpg';
-import campMazda2021 from './components/Assets/Campeoes/campMazda21.jpg';
-import campPorsche2021 from './components/Assets/Campeoes/campPorsche21.jpg';
 
 export type CampeonatoProps = {
     id:string,
@@ -38,7 +28,6 @@ export const campeonatos =
         id: "silvia22", 
         title: "Nissan Silvia KUP 2022", 
         logo: logoSilviaKup2022,
-        campeao: campSilvia2022,
         colors: {
             bkg:"#e9e9e9",
             head: "#bc0202",
@@ -63,7 +52,6 @@ export const campeonatos =
         id: "nascar22", 
         title: "Nascar Series Cup 2022", 
         logo: logoNascar2022,
-        campeao: campNascar2022,
         colors: {
             bkg:"black",
             head: "#0079c2",
@@ -155,7 +143,6 @@ export const campeonatos =
         id: "mazda22", 
         title: "Mazda Touring Cup 2022", 
         logo: logoMazda2022,
-        campeao: campMazda2022,
         colors: {
             bkg:"#5b5b5b",
             head: "#0d91b0",
@@ -203,7 +190,6 @@ export const campeonatos =
         id: "gt322", 
         title: "GT3 Cup 2022", 
         logo: logoGT32022,
-        campeao: campGT32022,
         colors: {
             bkg:"#1d1d1d",
             head: "#00bb1c",
@@ -297,7 +283,6 @@ export const campeonatos =
         id: "gr421", 
         title: "Multi Gr.4 $tream 2021", 
         logo: logoGr42021,
-        campeao: campGr42021,
         colors: {
             bkg:"black",
             head: "#d19a00",
@@ -389,7 +374,6 @@ export const campeonatos =
         id: "toyota21", 
         title: "Toyota $tream Light 2021", 
         logo: logoToyota2021,
-        campeao: campToyota2021,
         colors: {
             bkg:"black",
             head: "#d19a00",
@@ -481,7 +465,6 @@ export const campeonatos =
         id: "bmw21", 
         title: "BMW $tream Challenge 2021", 
         logo: logoBMW2021,
-        campeao: campBMW2021,
         colors: {
             bkg:"black",
             head: "#d19a00",
@@ -573,7 +556,6 @@ export const campeonatos =
         id: "redware21", 
         title: "Redware GT500 2021", 
         logo: logoRedware2021,
-        campeao: campRedware2021,
         colors: {
             bkg:"black",
             head: "red",
@@ -665,7 +647,6 @@ export const campeonatos =
         id: "mazda21", 
         title: "Mazda Touring Cup 2021", 
         logo: logoMazda2022,
-        campeao: campMazda2021,
         colors: {
             bkg:"#312d4c",
             head: "#0d91b0",
@@ -757,7 +738,6 @@ export const campeonatos =
         id: "porsche21", 
         title: "Porsche Cup Gemignani 2021", 
         logo: logoPorsche2021,
-        campeao: campPorsche2021,
         colors: {
             bkg:"#1d1d1d",
             head: "#d97316",

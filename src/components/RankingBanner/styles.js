@@ -6,16 +6,16 @@ import fundoCarbon from '../Assets/carbon.jpg';
 
 export const Container = styled.div`
     display: flex;
-    background-color: black;
-    color: white;
+    background-color: #e9e9e9;
     border-radius:10px;
     width: 400px;
-    height:500px;
+    min-height: 50vh;
     flex-direction: column;
     justify-content: top;
+    gap:10px;
+    padding-bottom: 10px;
 
     ${props =>props.silviaKup && css`
-        background: none;
         background-color: #e9e9e9;
         color: #bc0202;
         font-weight: bold;
@@ -80,11 +80,12 @@ export const LinhaPiloto = styled.div`
 
 export const RankingButton = styled.button`
     border-radius:10px;
-    border: solid #c7c7c7;
+    border: solid 3px #c7c7c7;
     background-color:#c7c7c7;
     align-items: center;
-    height: 25px;
-    margin: 2px;
+    width: 160px;
+    height: 30px;
+    margin: 5px;
     cursor: pointer;
 
     ${props =>props.silviaKup && css`

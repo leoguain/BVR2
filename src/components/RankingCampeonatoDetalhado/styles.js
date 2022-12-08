@@ -136,7 +136,7 @@ export const CelulaHeader = styled(CelulaRanking)`
 `
 export const LinhaPiloto = styled.div`
     display:flex;    
-    background-color: ${props => props.inputColor || "#282c34"}; #282c34;
+    background-color: ${props => props.inputColor || "#282c34"};
     color: ${props => props.inputColorFont || "white"};
     height: 20px;
     width: ${props => props.inputWidth || "80px"};

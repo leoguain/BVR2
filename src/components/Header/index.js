@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import roda from '../Assets/gt3.png';
 import logo from '../Assets/liga_bvr_gt_branco.png';
 
-import { Link } from "react-router-dom";
 import {NavbarContainer,
         NavbarLinkContainer,
         NavbarLink,
@@ -21,6 +20,15 @@ const Topo = () => {
 
     const [extendNavbar, setExtendNavbar] = useState(false)
     
+
+    /*<NavbarLink className="nav-link active" to="/admnoticias">
+                        Inscrições
+                    </NavbarLink>
+    <NavbarLinkExtended className="nav-link" to="/admnoticias">
+            Inscrições
+        </NavbarLinkExtended>
+                        */
+
     return (
         <NavbarContainer extend={extendNavbar}>
                 <NavbarLinkContainer>
@@ -40,9 +48,7 @@ const Topo = () => {
                     <NavbarLink className="nav-link active" to="/campeoes">
                         Hall da Fama
                     </NavbarLink>
-                    <NavbarLink className="nav-link active" to="/admnoticias">
-                        Inscrições
-                    </NavbarLink>
+                    
                     <NavbarLink className="nav-link active" to="/noticias">
                         Notícias
                     </NavbarLink>
@@ -80,9 +86,7 @@ const Topo = () => {
                         <NavbarLinkExtended className="nav-link" to="/campeoes">
                             Hall da Fama
                         </NavbarLinkExtended>
-                        <NavbarLinkExtended className="nav-link" to="/admnoticias">
-                            Inscrições
-                        </NavbarLinkExtended>
+                        
                         <NavbarLinkExtended className="nav-link" to="/noticias">
                             Notícias
                         </NavbarLinkExtended>

@@ -22,11 +22,15 @@ export default function Noticia(props) {
                              Veja mais
                          </BVR_a>
                     </LinkBox> 
-                    <Link to="/cdnoticias">
-                        <EditButton>Editar</EditButton>
-                    </Link>
+                    
                 </ContentBox>
             </ContainerNoticia>
         </Container>
     );
 }
+
+/*
+<Link to="/cdnoticias">
+                        <EditButton>Editar</EditButton>
+                    </Link>
+                    */

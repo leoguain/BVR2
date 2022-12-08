@@ -14,7 +14,7 @@ export function Cabecalho(props) {
             </div>
             <div>
                 <BVR_h2 inputFontColor={props.corTxt}>{props.nomeCampeonato}<br></br>
-                <BVR_span>RANKING GERAL</BVR_span></BVR_h2>
+                <BVR_span>{props.label}</BVR_span></BVR_h2>
             </div>
             <div>
                 <img src={logoBvgtv} alt='Logo Campeonato' width='70px'/>

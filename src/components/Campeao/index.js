@@ -3,7 +3,9 @@ import { BannerCampeao } from './styles.js';
 
 export default function Campeao(props) {
 
+const urlFoto = "/champions/" + props.url;
+
     return (
-        <BannerCampeao key={props.id} inputURL={props.url}/> 
+        <BannerCampeao inputURL={urlFoto}/> 
     );
 }

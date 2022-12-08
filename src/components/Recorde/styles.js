@@ -17,7 +17,6 @@ export const ItemContainer = styled.div`
     flex-direction: column;
     border-radius: 5px;
     align-items:center;
-    justify-content:right;
     margin-top: ${props => props.inputMargin || "0px"};
     padding:5px;
 
@@ -30,7 +29,6 @@ export const ItemContainer = styled.div`
 
 export const SubItemContainer = styled.div`
     display: flex;
-    background-color: #000;
     border-radius: 5px;
     align-items:center;
     gap: 5px;
@@ -59,14 +57,6 @@ export const InfoContainer = styled.div`
     @media(max-width: 768px) {
         width: 150px;
     }
-`;
-
-export const RecordeContainer = styled.div`
-    display: flex;
-    background-color: purple;
-    border-radius: 5px;
-    align-items:center;
-    align-self:center;
 `;
 
 export const BVR_h2 = styled.h2`

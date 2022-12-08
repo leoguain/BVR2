@@ -15,6 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gtm-module": "^2.0.11",
+    "react-icons": "^4.7.1",
     "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed",
     "react-mailto": "^0.4.0",
     "react-router-dom": "^6.4.2",

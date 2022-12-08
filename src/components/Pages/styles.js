@@ -26,6 +26,11 @@ export const BVR_h3 = styled.h3`
         font-weight: 400;
         color: #fff;
         line-height: 1.1em;
+
+        @media(max-width: 768px) {
+                font-size: 0.8em;
+                line-height: 1em;
+        }
 `;
 
 export const BVR_Link = styled.link`
@@ -48,21 +53,15 @@ export const BVR_Button = styled.button`
 `;
 
 export const MainContainerV = styled.div`
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    padding: 10px;
-    align-items:center;
-    align-self:center;
-    justify-content: center;
+        display: flex;
+        min-height: 70vh;
+        flex-direction: column;
+        align-self: center;
 
 
     @media(max-width: 768px) {
-        min-height: 0vh;
-        width:500px;
-        
-        justify-content: center;
+        width:100%;
+}
         
 `;
 
@@ -78,6 +77,7 @@ export const MainContainerH = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
         
 `;
 
@@ -93,6 +93,7 @@ export const CentralContainerV = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
         
 `;
 
@@ -112,8 +113,25 @@ export const CentralContainerH = styled.div`
 
     @media(max-width: 768px) {
         display: flex;
+        width: 80%;
+        flex-direction: column;
+    }
         
+`;
+
+export const ContainerCarteiras = styled.div`
+        display: flex;
+        width: 1000px;
+        padding: 10px;
+        flex-direction: row;
+        align-self: center;
         justify-content: center;
+
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
         
 `;
 
@@ -130,6 +148,7 @@ export const ContainerCampeoes = styled.div`
         width: 500px;
         flex-direction: column;
         justify-content: center;
+    }
         
 `;
 
@@ -146,7 +165,7 @@ export const ContainerPilotos = styled.div`
         width: 500px;
         flex-direction: column;
         justify-content: center;
-        
+    }    
 `;
 
 export const Container = styled.div`
@@ -157,22 +176,19 @@ export const Container = styled.div`
     padding: 20px;
     align-items:top;
     justify-content: center;
+    gap: 30px;
 
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
+        align-items:center;
         justify-content: center;
-        
+    }      
 `;
 
 export const HPColumn = styled.div`
-        background-color: ${props => props.inputColor || "none"};
-        border-radius: 10px;
-        min-height: 70vh;
         display: flex;
-        font-size: calc(10px + 2vmin);
-        color: darkgray;
-        padding: 20px;
+        min-height: 60vh;
         align-items:top;
         flex-direction: column;
         justify-content: center;
@@ -227,7 +243,8 @@ export const CDContainer = styled.div`
 
     @media(max-width: 768px) {
         width: 90%;
-}`;
+    }
+`;
 
 export const CDContainerCampo = styled.div`
         display:flex;
@@ -256,10 +273,9 @@ export const CDInput = styled.input`
 `;
 
 export const CDInputTexto = styled.textarea`
-        name: ${props => props.inputName || "CDN"};
         font-size: 16px;
         resize: none;
-        max-length: 10;
+        max-lines: 5;
         width: 500px;
         height: 150px;
         justify-content:top;

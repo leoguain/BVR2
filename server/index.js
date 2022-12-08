@@ -27,7 +27,7 @@ app.post("/newspost", (req, res) => {
     const {title, date, text, image, url} = req.body;
 
     let SQL = 
-        "INSERT INTO noticias_not VALUES (null,?,?,?,?,?)";
+        "INSERT INTO noticias_not VALUES (null,?,?,?,?,?);";
 
         db.query(SQL, [title, date, text, image, url], (err, result) => {
             console.log(err);
@@ -39,7 +39,7 @@ app.post("/newspost", (req, res) => {
 app.get("/getnews", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM noticias_not ORDER BY not_IdNoticia_int DESC"
+        "SELECT * FROM noticias_not ORDER BY not_IdNoticia_int DESC;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -50,7 +50,7 @@ app.get("/getnews", (req, res) => {
 app.get("/getdrivers", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_drivers_data"
+        "SELECT * FROM get_drivers_data;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -61,7 +61,7 @@ app.get("/getdrivers", (req, res) => {
 app.get("/getdocs", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM documentos_doc ORDER BY doc_TipoDocumento_str, doc_IdDocumento_int DESC"
+        "SELECT * FROM documentos_doc ORDER BY doc_TipoDocumento_str, doc_IdDocumento_int DESC;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -72,7 +72,7 @@ app.get("/getdocs", (req, res) => {
 app.get("/getrecordsc", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_records_c"
+        "SELECT * FROM get_records_c;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -83,7 +83,7 @@ app.get("/getrecordsc", (req, res) => {
 app.get("/getrecordst", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_records_t"
+        "SELECT * FROM get_records_t;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -94,7 +94,7 @@ app.get("/getrecordst", (req, res) => {
 app.get("/getlastgerald", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_last_results_geral_d"
+        "SELECT * FROM get_last_results_geral_d;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -105,7 +105,18 @@ app.get("/getlastgerald", (req, res) => {
 app.get("/getlastgeral", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_last_results_geral"
+        "SELECT * FROM get_last_results_geral;"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getlastrace", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_last_results_race;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);
@@ -116,7 +127,18 @@ app.get("/getlastgeral", (req, res) => {
 app.get("/getlicenses", (req, res) => {
 
     let SQL = 
-        "SELECT * FROM get_drivers_licenses"
+        "SELECT * FROM get_drivers_licenses;"
+
+        db.query(SQL, (err, result) => {
+            if (err) console.log(err);
+            else res.send(result);
+        })
+});
+
+app.get("/getchampions", (req, res) => {
+
+    let SQL = 
+        "SELECT * FROM get_champions;"
 
         db.query(SQL, (err, result) => {
             if (err) console.log(err);

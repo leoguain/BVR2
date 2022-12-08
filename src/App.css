@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
 
 .roda{
   width: 50px;
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 5s linear;
 }
 
 .logo{
