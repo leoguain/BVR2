@@ -17,8 +17,7 @@ export const BVR_h3 = styled.h3`
 `;
 
 export const BVR_a = styled.a`
-    color: #45f3ff;
-    margin-left: 10px;
+    color: #fff;
     cursor: pointer;
 
     &:hover{
@@ -118,13 +117,19 @@ export const TextBox = styled.div `
     min-height: 60px;
     font-size: 14px;
     margin: 2px;
-    border-bottom: solid 2px white;
 `;
 
 export const LinkBox = styled.div`
     height:25px;
-    font-size: 16px;
-    
+    font-size: 18px;
+    background-color: #149B49;
+    border: solid 2px #149B49;
+    border-radius: 0px 0px 10px 10px;
+
+    &:hover{
+
+        border: solid 2px lightgreen;
+    }
 `;
 
 export const EditButton = styled.button`

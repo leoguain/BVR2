@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 
-import { NoticiaProps, noticias as noticiasArray } from '../../noticias';
+import { NoticiasProps, noticias as noticiasArray } from '../../noticias';
 import { Container, ContainerBox, ImageBox, ContentBox, TitleBox, TextBox, DateBox, LinkBox, ContainerNoticia, CButton } from './styles';
 
 const PostBox = ({sizeType, accessType}) => {

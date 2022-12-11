@@ -17,12 +17,11 @@ export default function Noticia(props) {
                     <TextBox>
                         {props.text}
                     </TextBox>
-                    <LinkBox>
-                         <BVR_a href={props.url} target="_blank" rel="noreferrer">
+                    <BVR_a href={props.url} target="_blank" rel="noreferrer">
+                        <LinkBox>
                              Veja mais
-                         </BVR_a>
-                    </LinkBox> 
-                    
+                        </LinkBox> 
+                    </BVR_a>
                 </ContentBox>
             </ContainerNoticia>
         </Container>

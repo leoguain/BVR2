@@ -3,7 +3,7 @@ import { BVR_a, Container, BVR_h2, BVR_h3 } from './styles.js';
 
 export default function Documento(props) {
 
-    console.log("{\ndoc_IdDocumento_int:'',\ndoc_NomeDocumento_str:'"+props.nome+"',\ndoc_TipoDocumento_str:'"+props.tipo+"',\ndoc_UrlDocumento_str:'"+props.url+"',\n},")
+    //console.log("{\ndoc_IdDocumento_int:'',\ndoc_NomeDocumento_str:'"+props.nome+"',\ndoc_TipoDocumento_str:'"+props.tipo+"',\ndoc_UrlDocumento_str:'"+props.url+"',\n},")
 
     return (
         <Container>

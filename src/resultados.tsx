@@ -11,6 +11,8 @@ import Noticia from "./components/Noticia/index.js";
 
 import { recordes, RecordesProps } from "./recordes";
 import { documentos, DocumentosProps } from "./documentos";
+import { campeoes, CampeoesProps } from "./campeoes";
+import { noticias, NoticiasProps } from "./noticias";
 
 import {
   MainContainerV,
@@ -108,10 +110,10 @@ type LicencasProps = {
   posicao: number;
   cor: string;
 };
-type CampeoesProps = {
+type CampeoesPropsDb = {
   urlFoto: string;
 };
-type NoticiaProps = {
+type NoticiaPropsDb = {
   not_IdNoticia_int: number;
   not_TituloNoticia_str: string;
   not_DataNoticia_str: string;
@@ -131,13 +133,17 @@ type PostTypeProps = {
 };
 
 export const GetNoticias = (sizeType: PostTypeProps) => {
-  const [noticias, setNoticias] = useState<NoticiaProps[]>([]);
+  const [noticiasObj, setNoticiasObj] = useState<NoticiasProps[]>(noticias);
+
+  /* Data from DB
+  const [noticiasDb, setNoticiasDb] = useState<NoticiaPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getnews").then((response) => {
-      setNoticias(response.data);
+      setNoticiasDb(response.data);
     });
   }, []);
+  */
 
   /*
   <Link to="/cdnoticias">
@@ -152,56 +158,38 @@ export const GetNoticias = (sizeType: PostTypeProps) => {
         <BVR_h3>Veja todas as notícias postadas aqui no site.</BVR_h3>
 
         <CentralContainerH>
-          {noticias.map(
-            ({
-              not_IdNoticia_int,
-              not_TituloNoticia_str,
-              not_DataNoticia_str,
-              not_TextoNoticia_str,
-              not_ImagemNoticia_str,
-              not_URLNoticia_str,
-            }) => (
-              <Noticia
-                key={not_IdNoticia_int}
-                listNot={noticias}
-                SetListNot={setNoticias}
-                id={not_IdNoticia_int}
-                title={not_TituloNoticia_str}
-                date={not_DataNoticia_str}
-                text={not_TextoNoticia_str}
-                image={not_ImagemNoticia_str}
-                url={not_URLNoticia_str}
-              ></Noticia>
-            )
-          )}
+          {noticiasObj.map(({ id, title, data, texto, image, url }) => (
+            <Noticia
+              key={id}
+              listNot={noticiasObj}
+              SetListNot={setNoticiasObj}
+              id={id}
+              title={title}
+              date={data}
+              text={texto}
+              image={image}
+              url={url}
+            ></Noticia>
+          ))}
         </CentralContainerH>
       </MainContainerV>
     );
   } else {
     return (
       <ContainerBox>
-        {noticias.map(
-          ({
-            not_IdNoticia_int,
-            not_TituloNoticia_str,
-            not_DataNoticia_str,
-            not_TextoNoticia_str,
-            not_ImagemNoticia_str,
-            not_URLNoticia_str,
-          }) => (
-            <Noticia
-              key={not_IdNoticia_int}
-              listNot={noticias}
-              SetListNot={setNoticias}
-              id={not_IdNoticia_int}
-              title={not_TituloNoticia_str}
-              date={not_DataNoticia_str}
-              text={not_TextoNoticia_str}
-              image={not_ImagemNoticia_str}
-              url={not_URLNoticia_str}
-            ></Noticia>
-          )
-        )}
+        {noticiasObj.map(({ id, title, data, texto, image, url }) => (
+          <Noticia
+            key={id}
+            listNot={noticiasObj}
+            SetListNot={setNoticiasObj}
+            id={id}
+            title={title}
+            date={data}
+            text={texto}
+            image={image}
+            url={url}
+          ></Noticia>
+        ))}
       </ContainerBox>
     );
   }
@@ -217,41 +205,36 @@ export const GetNoticias = (sizeType: PostTypeProps) => {
       </Link>
 
       <CentralContainerH>
-        {noticias.map(
-          ({
-            not_IdNoticia_int,
-            not_TituloNoticia_str,
-            not_DataNoticia_str,
-            not_TextoNoticia_str,
-            not_ImagemNoticia_str,
-            not_URLNoticia_str,
-          }) => (
-            <Noticia
-              key={not_IdNoticia_int}
-              listNot={noticias}
-              SetListNot={setNoticias}
-              id={not_IdNoticia_int}
-              title={not_TituloNoticia_str}
-              date={not_DataNoticia_str}
-              text={not_TextoNoticia_str}
-              image={not_ImagemNoticia_str}
-              url={not_URLNoticia_str}
-            ></Noticia>
-          )
-        )}
+        {noticiasObj.map(({ id, title, data, texto, image, url }) => (
+          <Noticia
+            key={id}
+            listNot={noticiasObj}
+            SetListNot={setNoticiasObj}
+            id={id}
+            title={title}
+            date={data}
+            text={texto}
+            image={image}
+            url={url}
+          ></Noticia>
+        ))}
       </CentralContainerH>
     </MainContainerV>
   );
 };
 
 export const GetCampeoes = () => {
-  const [campeoes, setCampeoes] = useState<CampeoesProps[]>([]);
+  const [campeoesObj, setCampeoesObj] = useState<CampeoesProps[]>(campeoes);
+
+  /* Data from DB
+  const [campeoesDb, setCampeoesDb] = useState<CampeoesPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getchampions").then((response) => {
-      setCampeoes(response.data);
+      setCampeoesDb(response.data);
     });
   }, []);
+  */
 
   return (
     <MainContainerV>
@@ -259,12 +242,12 @@ export const GetCampeoes = () => {
       <BVR_h3>Confira os campeões da BVR desde a temporada 2021.</BVR_h3>
 
       <ContainerCampeoes>
-        {campeoes.map(({ urlFoto }, index) => {
+        {campeoesObj.map(({ urlFoto }, index) => {
           return (
             <Campeao
               key={index}
-              listDoc={campeoes}
-              SetListDoc={setCampeoes}
+              listDoc={campeoesObj}
+              SetListDoc={setCampeoesObj}
               id={index}
               url={urlFoto}
             />
