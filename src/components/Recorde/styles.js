@@ -3,25 +3,24 @@ import styled, {css} from 'styled-components'
 
 export const MainContainer = styled.div`
     display: flex;
+    border-radius: 5px;
 
     @media(max-width: 768px) {
-        display: flex;
+  
         flex-direction: column;
     }
 `;
 
 export const ItemContainer = styled.div`
     display: flex;
-    width: 840px;
     background-color: #000;
     flex-direction: column;
     border-radius: 5px;
     align-items:center;
     margin-top: ${props => props.inputMargin || "0px"};
-    padding:5px;
+    padding: 10px;
 
     @media(max-width: 768px) {
-        width: 450px;
         display: flex;
         flex-direction: column;
     }
@@ -32,15 +31,14 @@ export const SubItemContainer = styled.div`
     border-radius: 5px;
     align-items:center;
     gap: 5px;
-    margin: 2px;
-    padding:5px;
+    padding: 10px;
 
     background-color: ${props => props.inputColor || "black"};
 
     @media(max-width: 768px) {
-        width: 430px;
-        display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: center;
+        width:410px;
     }
 `;
 
@@ -58,7 +56,7 @@ export const InfoContainer = styled.div`
     
 
     @media(max-width: 768px) {
-        width: 150px;
+        ${props => props.inputWidth || "150px"};
     }
 `;
 
@@ -75,7 +73,7 @@ export const BVR_h3 = styled.h3`
 
 
     @media(max-width: 768px) {
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: 600;
     }
 `;
