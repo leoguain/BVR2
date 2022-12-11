@@ -56,9 +56,6 @@ export const MainContainerV = styled.div`
         display: flex;
         flex-direction: column;
         margin: 30px;
-
-
- 
 `;
 
 export const MainContainerH = styled.div`
@@ -95,8 +92,6 @@ export const CentralContainerV = styled.div`
 
 export const CentralContainerH = styled.div`
         display: flex;
-        width: 1000px;
-        padding: 10px;
         flex-flow: row wrap;
         flex-direction: row;
         align-self: center;
@@ -109,7 +104,6 @@ export const CentralContainerH = styled.div`
 
     @media(max-width: 768px) {
         display: flex;
-        width: 80%;
         flex-direction: column;
     }
         

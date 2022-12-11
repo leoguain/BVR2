@@ -42,7 +42,7 @@ export const Card = styled.div`
         padding-bottom: 20px;
 
         border : solid 3px ;
-        border-color: ${props => props.inputColor || "none"};
+        border-color: ${props => props.inputColor || "white"};
         
 `;
 

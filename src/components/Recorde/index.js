@@ -13,7 +13,7 @@ export default function Recorde(props) {
         return (
             <MainContainer>
                 <ItemContainer>
-                    <SubItemContainer>
+                    <SubItemContainer inputColor="#149B49">
                         <InfoContainer inputColor="#066F2F">
 
                             <BVR_h3>
@@ -30,18 +30,18 @@ export default function Recorde(props) {
                             </BVR_h3>
                         </InfoContainer>
                         
-                        <InfoContainer  inputColor="purple">
+                        <InfoContainer>
 
-                            <BVR_h3>
+                            <BVR_h3 inputColor="#DE72DA">
                                 {props.pilotoPole}<br></br>
                                 {props.tempoPole}
                             </BVR_h3>
 
                         </InfoContainer>
                         
-                        <InfoContainer  inputColor="purple">
+                        <InfoContainer>
                             
-                            <BVR_h3>
+                            <BVR_h3 inputColor="#DE72DA">
                                 {props.pilotoVmr}<br></br>
                                 {props.tempoVmr}
                             </BVR_h3>
@@ -63,7 +63,7 @@ export default function Recorde(props) {
                         <BVR_h3>{props.pista}</BVR_h3>
                     </InfoContainer>
 
-                    <SubItemContainer>
+                    <SubItemContainer >
                         <InfoContainer inputHeight="10px">
                             <BVR_h4>Categoria</BVR_h4>
                         </InfoContainer>
@@ -78,7 +78,7 @@ export default function Recorde(props) {
                         </InfoContainer>
                     </SubItemContainer>
 
-                    <SubItemContainer>
+                    <SubItemContainer inputColor="#149B49">
 
                         <InfoContainer inputColor="#066F2F">
 
@@ -96,18 +96,18 @@ export default function Recorde(props) {
                             </BVR_h3>
                         </InfoContainer>
                         
-                        <InfoContainer inputColor="purple">
+                        <InfoContainer>
 
-                            <BVR_h3>
+                            <BVR_h3 inputColor="#DE72DA">
                                 {props.pilotoPole}<br></br>
                                 {props.tempoPole}
                             </BVR_h3>
 
                         </InfoContainer>
                         
-                        <InfoContainer inputColor="purple">
+                        <InfoContainer >
                             
-                            <BVR_h3>
+                            <BVR_h3 inputColor="#DE72DA">
                                 {props.pilotoVmr}<br></br>
                                 {props.tempoVmr}
                             </BVR_h3>

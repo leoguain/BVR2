@@ -7,7 +7,6 @@ export const Container = styled.div`
     background-color: ${props => props.inputColor || "black"};
     color: ${props => props.inputColorFont || "white"};
     border-radius:10px;
-    min-height: 70vh;
     flex-direction: column;
     justify-content: center;
 
@@ -85,10 +84,11 @@ export const ItemHeaderCup = styled.div`
 
 export const ContainerTable = styled.div`
     display:flex;
-    min-height: 70vh;
     flex-direction: column;
     align-self:center;
     align-items:center;
+    margin-bottom: 10px;
+
 
     @media(max-width: 768px) {
         flex-direction: column;

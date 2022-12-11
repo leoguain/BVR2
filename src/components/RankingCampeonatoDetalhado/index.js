@@ -1,7 +1,7 @@
 import logoBvgtv from '../Assets/BVG_logo_branco.png';
 
 import { Container, LinhaRanking, HeaderCup, CelulaRanking, CellHeaderTable, DriverDataCell, ItemHeaderCup, ContainerTable, Tracks, ColunaSubMenu, PistasSubMenu, CelulaSubMenu, SubMenu, DriverDataHeaderMobile, HeaderTable, DriverDataRow } from './styles';
-import { BVR_h3 } from '../Pages/styles';
+import { BVR_h2, BVR_h3 } from '../Pages/styles';
 
 const RankingCampeonatoDetalhado = (campeonato) => {
     return (
@@ -11,7 +11,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                         <img src={campeonato.logo} alt='Logo Campeonato' width='80px'/>
                     </ItemHeaderCup>
                     <ItemHeaderCup>
-                        <BVR_h3>{campeonato.title}</BVR_h3>
+                        <BVR_h2>{campeonato.title}</BVR_h2>
                     </ItemHeaderCup>
                     <ItemHeaderCup>
                         <img src={logoBvgtv} alt='Logo Campeonato' width='80px'/>

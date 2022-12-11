@@ -32,8 +32,10 @@ export const SubItemContainer = styled.div`
     border-radius: 5px;
     align-items:center;
     gap: 5px;
-    margin: 5px;
+    margin: 2px;
     padding:5px;
+
+    background-color: ${props => props.inputColor || "black"};
 
     @media(max-width: 768px) {
         width: 430px;
@@ -48,11 +50,12 @@ export const InfoContainer = styled.div`
     height: ${props => props.inputHeight || "70px"};
     flex-direction: column;
     border-radius: 5px;
+    border: ${props => props.inputBorder || "none"};
     justify-content:center;
     align-items:center;
     
-
     background-color: ${props => props.inputColor || "black"};
+    
 
     @media(max-width: 768px) {
         width: 150px;
@@ -68,13 +71,12 @@ export const BVR_h2 = styled.h2`
 export const BVR_h3 = styled.h3`
     font-size: 1.1em;
     font-weight: 500;
-    color: #fff;
+    color: ${props => props.inputColor || "#fff"};
 
 
     @media(max-width: 768px) {
-        font-size: 0.8em;
-        font-weight: 400;
-        color: #fff;
+        font-size: 0.9em;
+        font-weight: 600;
     }
 `;
 
@@ -94,21 +96,4 @@ export const BVR_span = styled.span`
     font-size: 0.75em;
     font-weight: 400;
     color: #fff;
-`;
-
-export const BVR_a = styled.a`
-    color: #45f3ff;
-    margin-left: 10px;
-
-    &:hover{
-        color: "#2AC868";
-    }
-
-    &:active{
-        color: "#2AC868";
-    }
-
-    &:focus{
-        color: "#2AC868";
-    }
 `;
