@@ -54,16 +54,11 @@ export const BVR_Button = styled.button`
 
 export const MainContainerV = styled.div`
         display: flex;
-        min-height: 70vh;
         flex-direction: column;
-        align-self: center;
         margin: 30px;
 
 
-    @media(max-width: 768px) {
-        width:100%;
-}
-        
+ 
 `;
 
 export const MainContainerH = styled.div`

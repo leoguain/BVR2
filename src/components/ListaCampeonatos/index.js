@@ -4,7 +4,7 @@ import { campeonatos, CampeonatoProps } from '../../campeonatos';
 
 import {ContainerCentral, ContainerTabela, CButton, ContainerButtons } from './styles';
 import RankingCampeonatoDetalhado from '../RankingCampeonatoDetalhado';
-import { MainContainerV, BVR_h2, BVR_h3,  } from '../Pages/styles';
+import { MainContainerV, CentralContainerV, BVR_h2, BVR_h3,  } from '../Pages/styles';
 
 const ListaCampeonatos = () => {
 
@@ -21,10 +21,13 @@ const ListaCampeonatos = () => {
 
     return (
         <MainContainerV>
-            <BVR_h2>Campeonatos Realizados - 2022/2021</BVR_h2>
+            <div>
+            <BVR_h2>Campeonatos Realizados 2022/2021</BVR_h2>
             <BVR_h3>
                 Confira as tabelas de resultados dos campeonatos das temporadas 2022 e 2021.
             </BVR_h3>
+            </div>
+            
 
             <ContainerCentral>
                 <BVR_h3>Selecione o campeonato desejado:</BVR_h3>
