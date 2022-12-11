@@ -1,27 +1,34 @@
-import React, {useState, useCallback} from 'react';
+import {useState, useCallback, useRef} from 'react';
 
 import { campeonatos, CampeonatoProps } from '../../campeonatos';
 
-import { Container, CColumn, CHeader, CData, CCampeonato, CButton, Wrapper } from './styles';
+import {ContainerCentral, ContainerTabela, CButton, ContainerButtons } from './styles';
 import RankingCampeonatoDetalhado from '../RankingCampeonatoDetalhado';
+import { MainContainerV, BVR_h2, BVR_h3,  } from '../Pages/styles';
 
 const ListaCampeonatos = () => {
+
+    const ref = useRef(null);
 
     const [activeCup, setActiveCup] = useState(campeonatos[0]);
     const handleCupClick = useCallback((campeonato)=>{
         
         setActiveCup(campeonato);
 
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+
     }, [])
 
     return (
-        <Container >
-            <CColumn>
-                <CHeader>
-                    <p>Campeonatos Realizados (2022/2021)</p> 
-                </CHeader>
+        <MainContainerV>
+            <BVR_h2>Campeonatos Realizados - 2022/2021</BVR_h2>
+            <BVR_h3>
+                Confira as tabelas de resultados dos campeonatos das temporadas 2022 e 2021.
+            </BVR_h3>
 
-                <CData>
+            <ContainerCentral>
+                <BVR_h3>Selecione o campeonato desejado:</BVR_h3>
+                <ContainerButtons>
                     {campeonatos.map(campeonato => (
                             <CButton key={campeonato.id} inputURL={campeonato.logo} 
                                      onClick={()=>{
@@ -30,12 +37,12 @@ const ListaCampeonatos = () => {
                             /> 
   
                     ))}
-                </CData><br></br>
-                <CData>
+                </ContainerButtons>
+                <ContainerTabela ref={ref}>
                     {activeCup && <RankingCampeonatoDetalhado {...activeCup}/>}
-                </CData>
-            </CColumn>
-        </Container>
+                </ContainerTabela>
+            </ContainerCentral>
+        </MainContainerV>
     )
 }
 

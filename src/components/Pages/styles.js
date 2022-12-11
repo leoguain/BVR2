@@ -57,6 +57,7 @@ export const MainContainerV = styled.div`
         min-height: 70vh;
         flex-direction: column;
         align-self: center;
+        margin: 30px;
 
 
     @media(max-width: 768px) {

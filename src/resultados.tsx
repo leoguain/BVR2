@@ -9,6 +9,9 @@ import ListaLicenca from "./components/ListaLicenca/index.js";
 import Campeao from "./components/Campeao/index.js";
 import Noticia from "./components/Noticia/index.js";
 
+import { recordes, RecordesProps } from "./recordes";
+import { documentos, DocumentosProps } from "./documentos";
+
 import {
   MainContainerV,
   CentralContainerV,
@@ -29,13 +32,13 @@ import {
 import { MainContainer } from "../src/components/LinhaResultado/styles";
 import { ContainerBox } from "./components/Noticia/styles.js";
 
-type DocumentoProps = {
+type DocumentoPropsDb = {
   doc_IdDocumento_int: number;
   doc_NomeDocumento_str: string;
   doc_TipoDocumento_str: string;
   doc_UrlDocumento_str: string;
 };
-type RecordesProps = {
+type RecordesPropsDb = {
   PistaEtapa: string;
   Campeonato: string;
   Ano: string;
@@ -294,13 +297,18 @@ export const GetLicencas = () => {
 };
 
 export const GetDocumentos = () => {
-  const [documentos, setDocumentos] = useState<DocumentoProps[]>([]);
+  const [documentosObj, setDocumentosObj] =
+    useState<DocumentosProps[]>(documentos);
+
+  /* Data from DB
+  const [documentosDb, setDocumentosDb] = useState<DocumentoPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getdocs").then((response) => {
-      setDocumentos(response.data);
+      setDocumentosDb(response.data);
     });
   }, []);
+*/
 
   return (
     <MainContainerV>
@@ -310,7 +318,7 @@ export const GetDocumentos = () => {
         campeonatos realizados.
       </BVR_h3>
       <CentralContainerV>
-        {documentos.map(
+        {documentosObj.map(
           ({
             doc_IdDocumento_int,
             doc_NomeDocumento_str,
@@ -319,8 +327,8 @@ export const GetDocumentos = () => {
           }) => (
             <Documento
               key={doc_IdDocumento_int}
-              listDoc={documentos}
-              SetListDoc={setDocumentos}
+              listDoc={documentosObj}
+              SetListDoc={setDocumentosObj}
               id={doc_IdDocumento_int}
               nome={doc_NomeDocumento_str}
               tipo={doc_TipoDocumento_str}
@@ -334,13 +342,17 @@ export const GetDocumentos = () => {
 };
 
 export const GetRecordes = () => {
-  const [recordes, setRecordes] = useState<RecordesProps[]>([]);
+  const [recordesObj, setRecordesObj] = useState<RecordesProps[]>(recordes);
+
+  /* Data from DB
+  const [recordesDb, setRecordesDb] = useState<RecordesPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getrecordst").then((response) => {
-      setRecordes(response.data);
+      setRecordesDb(response.data);
     });
   }, []);
+  */
 
   let currentTrack = "";
   let repeat = "N";
@@ -353,7 +365,7 @@ export const GetRecordes = () => {
         de Corrida na Liga, por pista.
       </BVR_h3>
       <CentralContainerH>
-        {recordes.map(
+        {recordesObj.map(
           (
             {
               PistaEtapa,
@@ -381,8 +393,8 @@ export const GetRecordes = () => {
             return (
               <Recorde
                 key={index}
-                listDoc={recordes}
-                SetListDoc={setRecordes}
+                listDoc={recordesObj}
+                SetListDoc={setRecordesObj}
                 id={index}
                 pista={PistaEtapa}
                 campeonato={Campeonato}

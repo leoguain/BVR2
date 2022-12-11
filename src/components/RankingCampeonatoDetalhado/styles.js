@@ -24,45 +24,43 @@ export const Container = styled.div`
     `}
 `;
 
-export const TopoRanking = styled.div`
+export const Cabecalho = styled.div`
     display:flex;
     height: 100px;
     align-self:center;
     align-items:center;
-    justify-content: space between;
-    padding: 20px;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
 
     @media(max-width: 768px) {
-        width: 100%;
+        width: 430px;
         height: 80px;
     }
 `;
 
-export const ItensTopoRanking = styled.div`
+export const ItemCabecalho = styled.div`
     display:flex;
-    height: 100px;
-    align-self:center;
     align-items:center;
     justify-content: center;
     padding: 0px 40px;
 
     @media(max-width: 768px) {
         width: 133px;
-        padding: 20px 20px;
+        padding: 0px;
     }
 `;
 
-export const DataRanking = styled.div`
+export const ContainerTabela = styled.div`
     display:flex;
     min-height: 70vh;
     flex-direction: column;
     align-self:center;
     align-items:center;
-    padding: 0px 20px;
 
     @media(max-width: 768px) {
         flex-direction: column;
-        padding: 20px;
+        width: 430px;
     }
 `;
 
@@ -71,36 +69,30 @@ export const LinhaRanking = styled.div`
     height: ${props => props.inputHeight || "25px"};
     align-self: center;
     align-items: center;
-    justify-content: space-between;
 
     @media(max-width: 768px) { 
         flex-flow: row wrap;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 5px ;
     }
 `;
 
-export const LinhaHeader = styled(LinhaRanking)`
+export const CabecalhoTabela = styled(LinhaRanking)`
     display:flex;  
     height: 40px;
 
     @media(max-width: 768px) { 
         flex-flow: row wrap;
-        padding: 0px 10px 0px 10px;
         display:none;  
     }
 `
 
-export const LinhaHeaderExtend = styled(LinhaRanking)`
+export const CabecalhoTabelaMobile = styled(LinhaRanking)`
     display: none;    
     height: ${props => props.inputHeight || "25px"};
-    align-self: center;
-    align-items: center;
-    justify-content: space-between;
 
     @media(max-width: 768px) {
         display:flex;  
         flex-flow: row wrap;
-        padding: 0px 10px 0px 10px;
     }
 `;
 
@@ -110,7 +102,7 @@ export const CelulaRanking = styled.div`
     background-color: ${props => props.corHead || "purple"};
     color: ${props => props.inputColorFont || "white"};
     height: 16px;
-    width: 80px;
+    width: ${props => props.inputWidth || "80px"};
     align-items: center;
     justify-content: center;
     padding:3px;
@@ -125,7 +117,7 @@ export const CelulaRanking = styled.div`
     }
 `;
 
-export const CelulaHeader = styled(CelulaRanking)`
+export const LabelCabecalho = styled(CelulaRanking)`
     height: 30px;
     width: ${props => props.inputWidth || "80px"};
     font-size: 12px;
@@ -180,7 +172,6 @@ export const ColunaSubMenu = styled.div`
     @media(max-width: 768px) {
         display:flex; 
         flex-direction: column;
-        
     }
 `;
 

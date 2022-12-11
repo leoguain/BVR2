@@ -1,14 +1,7 @@
-import React from 'react'
-import ListaCampeonatos from '../ListaCampeonatos';
-import RankingBanner from '../RankingBanner';
-import { Container } from './styles.js';
+import ListaCampeonatos from "../ListaCampeonatos";
 
 const Campeonatos = () => {
-    return (
-        <Container >
-            <ListaCampeonatos />
-        </Container>
-    )
-}
+  return <ListaCampeonatos />;
+};
 
 export default Campeonatos;

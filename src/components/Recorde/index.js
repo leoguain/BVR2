@@ -3,6 +3,12 @@ import { BVR_a, MainContainer, ItemContainer, BVR_h2, BVR_h3, BVR_h4, BVR_span, 
 
 export default function Recorde(props) {
 
+ 
+//key={props.idPole}
+//key={props.idVmr}
+
+    //console.log("{\nIdPista:'',\nPistaEtapa:'"+props.pista+"',\nCampeonato:'"+props.campeonato+"',\nAno:'"+props.ano+"',\nPlataforma:'"+props.plataforma+"',\nCategoria:'"+props.categoria+"',\nDataEtapa:'',\nIdPilotoPole:'"+props.idPole+"',\nPilotoPole:'"+props.pilotoPole+"',\nTempoPole:'"+props.tempoPole+"',\nIdPilotoVMR:'"+props.idVmr+"',\nPilotoVMR:'"+props.pilotoVmr+"',\nTempoVMR:'"+props.tempoVmr+"',\n},")
+    
     if (props.repete ==="S") {
         return (
             <MainContainer>
@@ -24,7 +30,7 @@ export default function Recorde(props) {
                             </BVR_h3>
                         </InfoContainer>
                         
-                        <InfoContainer key={props.idPole} inputColor="purple">
+                        <InfoContainer  inputColor="purple">
 
                             <BVR_h3>
                                 {props.pilotoPole}<br></br>
@@ -33,7 +39,7 @@ export default function Recorde(props) {
 
                         </InfoContainer>
                         
-                        <InfoContainer key={props.idVmr} inputColor="purple">
+                        <InfoContainer  inputColor="purple">
                             
                             <BVR_h3>
                                 {props.pilotoVmr}<br></br>
@@ -90,7 +96,7 @@ export default function Recorde(props) {
                             </BVR_h3>
                         </InfoContainer>
                         
-                        <InfoContainer key={props.idPole} inputColor="purple">
+                        <InfoContainer inputColor="purple">
 
                             <BVR_h3>
                                 {props.pilotoPole}<br></br>
@@ -99,7 +105,7 @@ export default function Recorde(props) {
 
                         </InfoContainer>
                         
-                        <InfoContainer key={props.idVmr} inputColor="purple">
+                        <InfoContainer inputColor="purple">
                             
                             <BVR_h3>
                                 {props.pilotoVmr}<br></br>

@@ -1,49 +1,50 @@
 import styled, {css} from 'styled-components'
 
-export const Container = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    color: white;
-    border-radius:10px;
-    min-height: 70vh;
-    justify-content: center;
-    align-self: center;
-
-    @media(max-width: 700px) {
-        flex-direction: column;
-        
-    }`;
-
-export const CColumn = styled.div`
+export const ContainerCentral = styled.div`
     display:flex;
     background-color: ${props => props.inputColor || "black"};
-    border-radius:10px;
+    border-radius: 10px;
     align-self: center;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 20px;
+    padding:20px;
+    gap:20px;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        width: 450px;
+        
+    }
 `;
 
-export const CHeader = styled.div`
+export const ContainerButtons = styled.div`
     display:flex;
-    background-color: black;
-    border-radius: 10px 10px 0px 0px;
-    height: 80px;
-    align-items: center;
-    align-self: center;
+    width: 900px;
+    gap: 20px;
+    background-color: ${props => props.inputColor || "black"};
+
+    align-items: top;
+    flex-flow: row wrap;
     justify-content: center;
+    
+    @media(max-width: 768px) {
+        width: 400px;
+    }
 `;
 
-export const CData = styled.div`
+export const ContainerTabela = styled.div`
     display:flex;
     background-color: ${props => props.inputColor || "black"};
-    border-radius: 0px 0px 10px 10px ;
+
     align-items: top;
     align-self: center;
     flex-flow: row wrap;
     justify-content: center;
-    
+
+    @media(max-width: 768px) {
+        width: 400px;
+    }
 `;
 //background: url(${logoSilviaKup2022}); 
 export const CButton = styled.button`
@@ -60,7 +61,7 @@ export const CButton = styled.button`
     height:150px;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+
     padding: 5px;
     display: flex;
     cursor: pointer;

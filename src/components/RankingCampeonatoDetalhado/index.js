@@ -1,89 +1,89 @@
-import React from 'react';
-
-import logoCampeonato from '../Assets/LogosCampeonatos/logoRedware2021.png';
 import logoBvgtv from '../Assets/BVG_logo_branco.png';
 
-import CarregaTabela from '../CarregaTabela';
-import { Container, LinhaRanking, TopoRanking, CelulaRanking, CelulaHeader, LinhaPiloto, ItensTopoRanking, DataRanking, Pistas, ColunaSubMenu, PistasSubMenu, CelulaSubMenu, SubMenu, LinhaHeaderExtend, LinhaHeader } from './styles';
+import { Container, LinhaRanking, Cabecalho, CelulaRanking, LabelCabecalho, LinhaPiloto, ItemCabecalho, ContainerTabela, Pistas, ColunaSubMenu, PistasSubMenu, CelulaSubMenu, SubMenu, CabecalhoTabelaMobile, CabecalhoTabela } from './styles';
+import { BVR_h3 } from '../Pages/styles';
 
 const RankingCampeonatoDetalhado = (campeonato) => {
     return (
-        <Container 
-        /*inputColor={campeonato.colors.bkg}
-        inputColorFont={campeonato.colors.txt}*/>
+        <Container>
+                <Cabecalho >
+                    <ItemCabecalho>
+                        <img src={campeonato.logo} alt='Logo Campeonato' width='80px'/>
+                    </ItemCabecalho>
+                    <ItemCabecalho>
+                        <BVR_h3>{campeonato.title}</BVR_h3>
+                    </ItemCabecalho>
+                    <ItemCabecalho>
+                        <img src={logoBvgtv} alt='Logo Campeonato' width='80px'/>
+                    </ItemCabecalho>
+                </Cabecalho>
 
-                <TopoRanking >
-                    <ItensTopoRanking><img src={campeonato.logo} alt='Logo Campeonato' width='80px'/></ItensTopoRanking>
-                    <ItensTopoRanking>{campeonato.title}</ItensTopoRanking>
-                    <ItensTopoRanking><img src={logoBvgtv} alt='Logo Campeonato' width='80px'/></ItensTopoRanking>
-                </TopoRanking>
-
-                <DataRanking>
-                    <LinhaHeader>
-                        <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
-                            Pos.    
-                        </CelulaHeader>
-                        <CelulaHeader inputWidth="120px" corHead={campeonato.colors.head} >
-                            Piloto    
-                        </CelulaHeader>
-                        <CelulaHeader inputWidth="90px" corHead={campeonato.colors.head} >
-                            ID    
-                        </CelulaHeader>
+                <ContainerTabela>
+                    <CabecalhoTabela>
+                        <LabelCabecalho inputWidth="40px" corHead={campeonato.colors.head}>
+                            <BVR_h3>Pos.</BVR_h3>  
+                        </LabelCabecalho>
+                        <LabelCabecalho inputWidth="120px" corHead={campeonato.colors.head} >
+                            <BVR_h3>Piloto</BVR_h3>  
+                        </LabelCabecalho>
+                        <LabelCabecalho inputWidth="90px" corHead={campeonato.colors.head} >
+                            <BVR_h3>IdPSN</BVR_h3>   
+                        </LabelCabecalho>
 
                         {campeonato.pistas.map((pista) => (
                             <Pistas key={pista.etapa}>
-                                <CelulaHeader corHead={campeonato.colors.head}>
-                                    {pista.nome}   
-                                </CelulaHeader>
+                                <LabelCabecalho  corHead={campeonato.colors.head}>
+                                    <BVR_h3>{pista.nome}</BVR_h3>  
+                                </LabelCabecalho>
                             </Pistas>
                         ))}
 
-                        <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
-                            Penal.
-                        </CelulaHeader>
-                        <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
-                            Descarte
-                        </CelulaHeader>
-                        <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
-                            Total
-                        </CelulaHeader>
-                    </LinhaHeader>
+                        <LabelCabecalho inputWidth="40px" corHead={campeonato.colors.head}>
+                            <BVR_h3>Penal.</BVR_h3>
+                        </LabelCabecalho>
+                        <LabelCabecalho inputWidth="50px" corHead={campeonato.colors.head}>
+                            <BVR_h3>Descarte</BVR_h3>
+                        </LabelCabecalho>
+                        <LabelCabecalho inputWidth="50px" corHead={campeonato.colors.head}>
+                            <BVR_h3>Total</BVR_h3>
+                        </LabelCabecalho>
+                    </CabecalhoTabela>
 
                     {campeonato.resultados.map((resultado) => (
                         <div key={resultado.pos}>
 
-                            <LinhaHeaderExtend inputHeight="40px">
-                                <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
-                                    Pos.    
-                                </CelulaHeader>
-                                <CelulaHeader inputWidth="120px" corHead={campeonato.colors.head} >
-                                    Piloto    
-                                </CelulaHeader>
-                                <CelulaHeader inputWidth="90px" corHead={campeonato.colors.head} >
-                                    ID    
-                                </CelulaHeader>
+                            <CabecalhoTabelaMobile inputHeight="40px">
+                                <LabelCabecalho inputWidth="40px" corHead={campeonato.colors.head}>
+                                    <BVR_h3>Pos.</BVR_h3>    
+                                </LabelCabecalho>
+                                <LabelCabecalho inputWidth="120px" corHead={campeonato.colors.head} >
+                                    <BVR_h3>Piloto</BVR_h3>    
+                                </LabelCabecalho>
+                                <LabelCabecalho inputWidth="90px" corHead={campeonato.colors.head} >
+                                    <BVR_h3>IdPSN</BVR_h3>      
+                                </LabelCabecalho>
 
                                 {campeonato.pistas.map((pista) => (
                                     <Pistas key={pista.etapa}>
-                                        <CelulaHeader corHead={campeonato.colors.head}>
+                                        <LabelCabecalho corHead={campeonato.colors.head}>
                                             {pista.nome}   
-                                        </CelulaHeader>
+                                        </LabelCabecalho>
                                     </Pistas>
                                 ))}
 
-                                <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
+                                <LabelCabecalho inputWidth="40px" corHead={campeonato.colors.head}>
                                     Penal.
-                                </CelulaHeader>
-                                <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
+                                </LabelCabecalho>
+                                <LabelCabecalho inputWidth="50px" corHead={campeonato.colors.head}>
                                     Descarte
-                                </CelulaHeader>
-                                <CelulaHeader inputWidth="50px" corHead={campeonato.colors.head}>
+                                </LabelCabecalho>
+                                <LabelCabecalho inputWidth="50px" corHead={campeonato.colors.head}>
                                     Total
-                                </CelulaHeader>
-                            </LinhaHeaderExtend>
+                                </LabelCabecalho>
+                            </CabecalhoTabelaMobile>
 
                             <LinhaRanking>
-                                <LinhaPiloto inputColor={campeonato.colors.row} inputWidth="50px">
+                                <LinhaPiloto inputColor={campeonato.colors.row} inputWidth="40px">
                                     {resultado.pos}
                                 </LinhaPiloto>
                                 <LinhaPiloto inputColor={campeonato.colors.row} inputWidth="120px">
@@ -102,7 +102,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                                     </Pistas>
                                 ))}
                                 
-                                <LinhaPiloto inputWidth="50px" inputColor={campeonato.colors.row}>
+                                <LinhaPiloto inputWidth="40px" inputColor={campeonato.colors.row}>
                                     {resultado.penal}
                                 </LinhaPiloto>
                                 <LinhaPiloto inputWidth="50px" inputColor={campeonato.colors.row}>
@@ -137,7 +137,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                             </SubMenu>
                         </div>
                     ))}
-                </DataRanking>
+                </ContainerTabela>
 
         </Container>
     )
