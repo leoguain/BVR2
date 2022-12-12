@@ -11,6 +11,8 @@ export default function Piloto(props) {
     const fotoPiloto = new Image();   // Create new img element
     fotoPiloto.src = "../Assets/Pilotos/genericDriver.jpg";
     
+    //console.log("{\nid:"+props.id+",\nnome:'"+props.nome+"',\nidPsn:'"+props.idPsn+"',\nequipe:'"+props.equipe+"',\ndataNascimento:'"+props.dataNascimento+"',\nemail:'',\ninstagram:'"+props.instagram+"',\ncarteira:'"+props.carteira+"',\nfoto:'"+props.foto+"',\nNumeroCampeonatos:"+props.numeroCampeonatos+",\nNumeroCorridas:"+props.numeroCorridas+",\nTotalPontos:"+props.totalPontos+",\nNumeroPenais:"+props.numeroPenais+",\nTotalPenais:"+props.totalPenais+",\nPontuacaoGeral:"+props.pontuacaoGeral+",\nTotalP1:"+props.totalP1+",\nTotalP2:"+props.totalP2+",\nTotalP3:"+props.totalP3+",\nTotalP4:"+props.totalP4+",\nTotalP5:"+props.totalP5+",\nTotalP6:"+props.totalP6+",\nTotalP7:"+props.totalP7+",\nTotalP8:"+props.totalP8+",\nTotalP9:"+props.totalP9+",\nTotalP10:"+props.totalP10+",\nTotalP11:"+props.totalP11+",\nTotalP12:"+props.totalP12+",\nTotalP13:"+props.totalP13+",\nTotalP14:"+props.totalP14+",\nNumeroPoles:"+props.numeroPoles+",\nNumeroVMR:"+props.numeroVMR+",\n},")
+
     return (
         <PContainer>
                 <PCard>

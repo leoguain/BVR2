@@ -9,7 +9,7 @@ import youtubeLogo from '../Assets/YtCinza.png';
 
 import {Container, LinkContainer} from '../Styles/styles.js'
 
-const Rodape = () => {
+const Footer = () => {
     return (
         <Container >
                 <LinkContainer>
@@ -36,4 +36,4 @@ const Rodape = () => {
         </Container>
     )
 }
-export default Rodape;
+export default Footer;

@@ -13,6 +13,8 @@ import { recordes, RecordesProps } from "./recordes";
 import { documentos, DocumentosProps } from "./documentos";
 import { campeoes, CampeoesProps } from "./campeoes";
 import { noticias, NoticiasProps } from "./noticias";
+import { pilotos, PilotosProps } from "./pilotos";
+import { licencas, LicencasProps } from "./licencas";
 import {
   ultimosResultadosEtapa,
   ultimosResultadosGeral,
@@ -73,7 +75,7 @@ type ResultadoPropsDb = {
   totalPontos: number;
   posicao: string;
 };
-type PilotoProps = {
+type PilotosPropsDb = {
   id: number;
   nome: string;
   idPsn: string;
@@ -106,7 +108,7 @@ type PilotoProps = {
   NumeroPoles: number;
   NumeroVMR: number;
 };
-type LicencasProps = {
+type LicencasPropsDb = {
   id: number;
   nome: string;
   idPsn: string;
@@ -264,13 +266,17 @@ export const GetCampeoes = () => {
 };
 
 export const GetLicencas = () => {
-  const [licencas, setLicencas] = useState<LicencasProps[]>([]);
+  const [licencasObj, setLicencasObj] = useState<LicencasProps[]>(licencas);
+
+  /* Data from DB
+  const [licencasDb, setLicencasDb] = useState<LicencasPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getlicenses").then((response) => {
-      setLicencas(response.data);
+      setLicencasDb(response.data);
     });
   }, []);
+  */
 
   return (
     <MainContainerV>
@@ -278,7 +284,7 @@ export const GetLicencas = () => {
       <BVR_h3>Acompanhe o nível de carteira de cada piloto na BVR.</BVR_h3>
 
       <ContainerCarteiras>
-        <ListaLicenca listLic={licencas} SetListLic={setLicencas} />
+        <ListaLicenca listLic={licencasObj} SetListLic={setLicencasObj} />
       </ContainerCarteiras>
     </MainContainerV>
   );
@@ -407,13 +413,17 @@ export const GetRecordes = () => {
 };
 
 export const GetPilotos = () => {
-  const [pilotos, setPilotos] = useState<PilotoProps[]>([]);
+  const [pilotosObj, setPilotosObj] = useState<PilotosProps[]>(pilotos);
+
+  /* Data from DB
+  const [pilotosDb, setPilotosDb] = useState<PilotosPropsDb[]>([]);
 
   useEffect(() => {
     Axios.get("http://localhost:3001/getdrivers").then((response) => {
-      setPilotos(response.data);
+      setPilotosDb(response.data);
     });
   }, []);
+*/
 
   return (
     <MainContainerV>
@@ -421,7 +431,7 @@ export const GetPilotos = () => {
       <BVR_h3>Conheça os pilotos na Liga.</BVR_h3>
 
       <ContainerPilotos>
-        {pilotos.map(
+        {pilotosObj.map(
           (
             {
               id,
@@ -459,8 +469,8 @@ export const GetPilotos = () => {
           ) => (
             <Piloto
               key={id}
-              listDoc={pilotos}
-              SetListDoc={setPilotos}
+              listDoc={pilotosObj}
+              SetListDoc={setPilotosObj}
               id={id}
               nome={nome}
               idPsn={idPsn}

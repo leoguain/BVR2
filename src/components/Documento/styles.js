@@ -5,12 +5,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: left;
     align-items:center;
-    align_self:center;
-    margin: 10px;
+    margin: 5px;
 
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
+        margin: 15px;
     }
 `;
 
@@ -18,7 +18,7 @@ export const BVR_h2 = styled.h2`
         font-size: 1.25em;
         font-weight: 600;
         color: #fff;
-        line-height: 0.4em;
+        line-height: 1.2em;
         margin: 10px;
 `;
 
