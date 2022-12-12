@@ -1,9 +1,7 @@
-import React from 'react';
-
 import logoCampeonato from '../Assets/LogosCampeonatos/logoSilviaKupRed2022.png';
 import logoBvgtv from '../Assets/BVGtv logo.png';
 
-import { BVR_a, MainContainer, BVR_h2, BVR_h3, LinhaRanking, CelulaRanking, LinhaPiloto, TopoRanking, BVR_span} from './styles';
+import {BVR_h2, BVR_h3, LinhaRanking, CelulaRanking, LinhaPiloto, TopoRanking, BVR_span} from './styles';
 
 export function Cabecalho(props) {
 
@@ -26,10 +24,12 @@ export function Cabecalho(props) {
 
 export function LinhaResultado(props) {
 
+    //console.log("{\nnomeCampeonato:'"+ props.nomeCampeonato +"',\nano:'"+props.ano+"',\nlogoCampeonato:'"+props.logoCampeonato+"',\ncorBkg:'"+props.corBkg+"',\ncorHead:'"+props.corHead+"',\ncorRow:'"+props.corRow+"',\ncorTxt:'"+props.corTxt+"',\nIdPiloto:'"+props.key+"',\nnomePiloto:'"+props.nomePiloto+"',\nidPsn:'"+props.idPsn+"',\ntotalPontos:'"+props.totalPontos+"',\nposicao:'"+props.posicao+"',\n},")
+
     return (
         <LinhaRanking>
             <CelulaRanking inputColor={props.corHead} >
-                {props.posicao}º
+                {props.posicao}
             </CelulaRanking>
             <LinhaPiloto inputColor={props.corRow}>
                 <BVR_h3 inputFontColor={props.corTxt}>{props.nomePiloto}</BVR_h3>    

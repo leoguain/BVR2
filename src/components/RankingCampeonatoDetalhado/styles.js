@@ -65,7 +65,7 @@ export const HeaderCup = styled.div`
     gap: 20px;
 
     @media(max-width: 768px) {
-        width: 430px;
+        width: 370px;
         height: 80px;
     }
 `;
@@ -77,7 +77,7 @@ export const ItemHeaderCup = styled.div`
     padding: 0px 40px;
 
     @media(max-width: 768px) {
-        width: 133px;
+        width: 120px;
         padding: 0px;
     }
 `;
@@ -92,7 +92,7 @@ export const ContainerTable = styled.div`
 
     @media(max-width: 768px) {
         flex-direction: column;
-        width: 430px;
+        width: 370px;
     }
 `;
 
@@ -112,7 +112,7 @@ export const CellHeaderTable = styled(CelulaRanking)`
     font-size: 12px;
 
     @media(max-width: 768px) {
-        width: ${props => props.inputWidth || "160px"};
+        width: ${props => props.inputWidth || "140px"};
         font-size: 16px;
     }
 `;
@@ -120,14 +120,26 @@ export const CellHeaderTable = styled(CelulaRanking)`
 export const DriverDataHeaderMobile = styled(LinhaRanking)`
     display: none;    
     
-
     @media(max-width: 768px) {
         display:flex;  
         flex-flow: row wrap;
         height: ${props => props.inputHeight || "25px"};
-        width: 400px;
-        gap:5px;
-        margin-bottom: 90px;
+  
+        margin-bottom: 100px;
+        justify-content: center;
+    }
+`;
+
+export const DriverDataHeaderRowMobile = styled(LinhaRanking)`
+    display: none;    
+    
+    @media(max-width: 768px) {
+        display:flex;  
+        flex-flow: row wrap;
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
     }
 `;
 
@@ -154,8 +166,8 @@ export const DriverDataCell = styled.div`
     font-size: 11px;
 
     @media(max-width: 768px) {
-        font-size: 14px;
-        width: ${props => props.inputWidth || "160px"};
+        font-size: 13px;
+        width: ${props => props.inputWidth || "140px"};
         padding:0px;
         margin:1px;
     }
@@ -172,9 +184,8 @@ export const SubMenu = styled.div`
 
     @media(max-width: 768px) {
         display:flex;
-        width: 400px;
         margin-bottom:40px;
-        padding-left:5px;
+        justify-content: center;
     }
 `;
 
@@ -200,7 +211,7 @@ export const CelulaSubMenu = styled.div`
     
         align-items: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: 13px;
         height: 25px;
         width: ${props => props.inputWidth || "150px"}; 
         margin:1px;

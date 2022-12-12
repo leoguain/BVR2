@@ -69,7 +69,6 @@ export const ContainerBox = styled.div`
 
 export const ContainerNoticia = styled.div`
     justify-content: center;
-    margin: 5px;
 
     @media(max-width: 768px) {
         width: 360px
@@ -116,7 +115,8 @@ export const TitleBox = styled.div `
 export const TextBox = styled.div `
     min-height: 60px;
     font-size: 14px;
-    margin: 2px;
+    margin: 5px;
+    text-align: justify;
 `;
 
 export const LinkBox = styled.div`

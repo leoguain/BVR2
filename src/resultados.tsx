@@ -13,6 +13,11 @@ import { recordes, RecordesProps } from "./recordes";
 import { documentos, DocumentosProps } from "./documentos";
 import { campeoes, CampeoesProps } from "./campeoes";
 import { noticias, NoticiasProps } from "./noticias";
+import {
+  ultimosResultadosEtapa,
+  ultimosResultadosGeral,
+  ResultadosProps,
+} from "./ultimosResultados";
 
 import {
   MainContainerV,
@@ -54,7 +59,7 @@ type RecordesPropsDb = {
   PilotoVMR: string;
   TempoVMR: string;
 };
-type ResultadoProps = {
+type ResultadoPropsDb = {
   nomeCampeonato: string;
   ano: string;
   logoCampeonato: string;
@@ -496,7 +501,26 @@ export const GetPilotos = () => {
 };
 
 export const GetUltimoResultado = (rankingType: RankingTypeProps) => {
-  const [resultados, setResultados] = useState<ResultadoProps[]>([]);
+  const [resultadoGeralObj, setResultadoGeralObj] = useState<ResultadosProps[]>(
+    ultimosResultadosGeral
+  );
+  const [resultadoEtapaObj, setResultadoEtapaObj] = useState<ResultadosProps[]>(
+    ultimosResultadosEtapa
+  );
+
+  let [resultadosObj, setResultadosObj] =
+    useState<ResultadosProps[]>(resultadoEtapaObj);
+
+  let headerLabel: string = "ÚLTIMA ETAPA";
+
+  if (rankingType.rankingType === "Geral") {
+    headerLabel = "RANKING GERAL";
+  }
+
+  //console.log(resultadosObj);
+  //setResultadosObj(ultimosResultadosGeral);
+  /*
+  const [resultadosDb, setResultadosDb] = useState<ResultadoPropsDb[]>([]);
 
   let apiPath: string = "http://localhost:3001/getlastrace";
   let headerLabel: string = "ÚLTIMA ETAPA";
@@ -508,21 +532,21 @@ export const GetUltimoResultado = (rankingType: RankingTypeProps) => {
 
   useEffect(() => {
     Axios.get(apiPath).then((response) => {
-      setResultados(response.data);
+      setResultadosDb(response.data);
     });
-  }, [apiPath]);
+  }, [apiPath]);*/
 
   return (
     <MainContainer>
       <Cabecalho
-        nomeCampeonato={resultados[0]?.nomeCampeonato}
-        ano={resultados[0]?.ano}
-        logo={resultados[0]?.logoCampeonato}
-        corTxt={resultados[0]?.corTxt}
+        nomeCampeonato={resultadosObj[0]?.nomeCampeonato}
+        ano={resultadosObj[0]?.ano}
+        logo={resultadosObj[0]?.logoCampeonato}
+        corTxt={resultadosObj[0]?.corTxt}
         label={headerLabel}
       />
 
-      {resultados.map(
+      {resultadosObj.map(
         (
           {
             nomeCampeonato,
@@ -541,8 +565,8 @@ export const GetUltimoResultado = (rankingType: RankingTypeProps) => {
           index
         ) => (
           <LinhaResultado
-            key={idPiloto}
-            posicao={index + 1}
+            id={idPiloto}
+            posicao={posicao}
             nomeCampeonato={nomeCampeonato}
             ano={ano}
             logoCampeonato={logoCampeonato}

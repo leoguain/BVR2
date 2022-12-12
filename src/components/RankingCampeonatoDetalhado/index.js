@@ -1,6 +1,6 @@
 import logoBvgtv from '../Assets/BVG_logo_branco.png';
 
-import { Container, LinhaRanking, HeaderCup, CelulaRanking, CellHeaderTable, DriverDataCell, ItemHeaderCup, ContainerTable, Tracks, ColunaSubMenu, PistasSubMenu, CelulaSubMenu, SubMenu, DriverDataHeaderMobile, HeaderTable, DriverDataRow } from './styles';
+import { Container, LinhaRanking, HeaderCup, CelulaRanking, CellHeaderTable, DriverDataCell, ItemHeaderCup, ContainerTable, Tracks, ColunaSubMenu, PistasSubMenu, CelulaSubMenu, SubMenu, DriverDataHeaderMobile, HeaderTable, DriverDataRow, DriverDataHeaderRowMobile } from './styles';
 import { BVR_h2, BVR_h3 } from '../Pages/styles';
 
 const RankingCampeonatoDetalhado = (campeonato) => {
@@ -11,7 +11,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                         <img src={campeonato.logo} alt='Logo Campeonato' width='80px'/>
                     </ItemHeaderCup>
                     <ItemHeaderCup>
-                        <BVR_h2>{campeonato.title}</BVR_h2>
+                        <BVR_h3>{campeonato.title}</BVR_h3>
                     </ItemHeaderCup>
                     <ItemHeaderCup>
                         <img src={logoBvgtv} alt='Logo Campeonato' width='80px'/>
@@ -53,25 +53,48 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                         <div key={resultado.pos}>
 
                             <DriverDataHeaderMobile inputHeight="40px">
-                                <CellHeaderTable inputWidth="40px" corHead={campeonato.colors.head}>
-                                    <BVR_h3>Pos.</BVR_h3>    
-                                </CellHeaderTable>
-                                <CellHeaderTable corHead={campeonato.colors.head} >
-                                    <BVR_h3>Piloto</BVR_h3>    
-                                </CellHeaderTable>
-                                <CellHeaderTable corHead={campeonato.colors.head} >
-                                    <BVR_h3>IdPSN</BVR_h3>      
-                                </CellHeaderTable>
+                                <DriverDataHeaderRowMobile>
+                                    <CellHeaderTable inputWidth="40px" corHead={campeonato.colors.head}>
+                                        <BVR_h3>Pos.</BVR_h3>    
+                                    </CellHeaderTable>
+                                    <CellHeaderTable corHead={campeonato.colors.head} >
+                                        <BVR_h3>Piloto</BVR_h3>    
+                                    </CellHeaderTable>
+                                    <CellHeaderTable corHead={campeonato.colors.head} >
+                                        <BVR_h3>IdPSN</BVR_h3>      
+                                    </CellHeaderTable>
 
-                                <DriverDataCell inputColor={campeonato.colors.row} inputWidth="40px">
-                                    {resultado.pos}
-                                </DriverDataCell>
-                                <DriverDataCell inputColor={campeonato.colors.row}>
-                                    {resultado.nome}
-                                </DriverDataCell>
-                                <DriverDataCell inputColor={campeonato.colors.row}>
-                                    {resultado.id}
-                                </DriverDataCell>
+                                    <DriverDataCell inputColor={campeonato.colors.row} inputWidth="40px">
+                                        {resultado.pos}
+                                    </DriverDataCell>
+                                    <DriverDataCell inputColor={campeonato.colors.row}>
+                                        {resultado.nome}
+                                    </DriverDataCell>
+                                    <DriverDataCell inputColor={campeonato.colors.row}>
+                                        {resultado.id}
+                                    </DriverDataCell>
+                                </DriverDataHeaderRowMobile>
+                                <DriverDataHeaderRowMobile>
+                                    <CellHeaderTable inputWidth="105px" corHead={campeonato.colors.head}>
+                                        Penal.
+                                    </CellHeaderTable>
+                                    <CellHeaderTable inputWidth="105px" corHead={campeonato.colors.head}>
+                                        Descarte
+                                    </CellHeaderTable>
+                                    <CellHeaderTable inputWidth="105px" corHead={campeonato.colors.head}>
+                                        Total
+                                    </CellHeaderTable>
+                                    <DriverDataCell inputWidth="105px" inputColor={campeonato.colors.row}>
+                                        {resultado.penal}
+                                    </DriverDataCell>
+                                    <DriverDataCell inputWidth="105px" inputColor={campeonato.colors.row}>
+                                        {resultado.descarte}
+                                    </DriverDataCell>
+                                    <DriverDataCell inputWidth="105px" inputColor={campeonato.colors.row}>
+                                        {resultado.total}
+                                    </DriverDataCell>
+                                </DriverDataHeaderRowMobile>
+                                
 
                                 {campeonato.pistas.map((pista) => (
                                     <Tracks key={pista.etapa}>
@@ -81,24 +104,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                                     </Tracks>
                                 ))}
 
-                                <CellHeaderTable inputWidth="120px" corHead={campeonato.colors.head}>
-                                    Penal.
-                                </CellHeaderTable>
-                                <CellHeaderTable inputWidth="120px" corHead={campeonato.colors.head}>
-                                    Descarte
-                                </CellHeaderTable>
-                                <CellHeaderTable inputWidth="120px" corHead={campeonato.colors.head}>
-                                    Total
-                                </CellHeaderTable>
-                                <DriverDataCell inputWidth="120px" inputColor={campeonato.colors.row}>
-                                    {resultado.penal}
-                                </DriverDataCell>
-                                <DriverDataCell inputWidth="120px" inputColor={campeonato.colors.row}>
-                                    {resultado.descarte}
-                                </DriverDataCell>
-                                <DriverDataCell inputWidth="120px" inputColor={campeonato.colors.row}>
-                                    {resultado.total}
-                                </DriverDataCell>
+                                
                             </DriverDataHeaderMobile>
 
                             <DriverDataRow>
@@ -138,7 +144,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                                     {campeonato.pistas.map((pista) => (
                                         <PistasSubMenu key={pista.etapa}>
                                             <CelulaSubMenu 
-                                                inputWidth="205px" 
+                                                inputWidth="200px" 
                                                 corHead={campeonato.colors.head}>
                                                 {pista.nome}   
                                             </CelulaSubMenu>
@@ -149,7 +155,7 @@ const RankingCampeonatoDetalhado = (campeonato) => {
                                     {resultado.pontos.map((ponto) => (
                                         <PistasSubMenu key={ponto.et}>
                                             <CelulaSubMenu 
-                                                inputWidth="160px"
+                                                inputWidth="100px"
                                                 corHead={campeonato.colors.row}>
                                                 {ponto.pt}
                                             </CelulaSubMenu>
