@@ -38,7 +38,7 @@ export const SubItemContainer = styled.div`
     @media(max-width: 768px) {
         flex-flow: row wrap;
         justify-content: center;
-        width:410px;
+        width:200px;
     }
 `;
 
@@ -56,7 +56,8 @@ export const InfoContainer = styled.div`
     
 
     @media(max-width: 768px) {
-        ${props => props.inputWidth || "150px"};
+        flex-direction: row;
+        width: 200px;
     }
 `;
 
