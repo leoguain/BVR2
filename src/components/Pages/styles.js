@@ -4,14 +4,14 @@ export const BVR_h1 = styled.h1`
         font-size: 1.75em;
         font-weight: 600;
         color: #fff;
-        line-height: 1.1em;
+        line-height: 1.9em;
 `;
 
 export const BVR_h2 = styled.h2`
         font-size: 1.25em;
         font-weight: 600;
         color: #fff;
-        line-height: 1.1em;
+        line-height: 1.4em;
 `;
 
 export const BVR_span = styled.span`
@@ -25,7 +25,7 @@ export const BVR_h3 = styled.h3`
         font-size: 1em;
         font-weight: 400;
         color: #fff;
-        line-height: 1.1em;
+        line-height: 1.2em;
 
         @media(max-width: 768px) {
                 font-size: 0.8em;

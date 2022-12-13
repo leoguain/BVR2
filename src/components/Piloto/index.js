@@ -32,7 +32,7 @@ export default function Piloto(props) {
                             <BVR_h2>{props.nome}<br></br> 
                                 <BVR_span>{props.idPsn}</BVR_span>
                             </BVR_h2>
-                            
+
                             <PDados className="Data">
                                 <PBox>
                                     <BVR_h3>{age}<BVR_span> anos</BVR_span></BVR_h3>

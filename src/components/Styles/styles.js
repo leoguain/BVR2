@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     background-color: black;
-    color: darkgray;
+    color: #149B49;
     font-size: 14px;
+    font-weight: 600;
     padding: 25px;
     align-items: center;
     display: flex;
@@ -11,15 +12,15 @@ export const Container = styled.div`
     flex-direction: column;
 
     @media (max-width:700px){
-        font-size: 10px;
+        font-size: 12px;
         
     }`
 
 export const LinkContainer = styled.div`
     display: flex;
-    color: darkgray;
+    color: #149B49;
     font-size: 14px;
-    width: 300px;
+    width: 250px;
     align-items: center;
     justify-content: space-between;
 `

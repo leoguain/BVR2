@@ -428,7 +428,10 @@ export const GetPilotos = () => {
   return (
     <MainContainerV>
       <BVR_h2>Pilotos</BVR_h2>
-      <BVR_h3>Conheça os pilotos na Liga.</BVR_h3>
+      <BVR_h3>
+        Conheça os pilotos na Liga BVR. Aqui você encontra cada piloto e suas
+        principais estatísticas.
+      </BVR_h3>
 
       <ContainerPilotos>
         {pilotosObj.map(
@@ -518,17 +521,11 @@ export const GetUltimoResultado = (rankingType: RankingTypeProps) => {
     ultimosResultadosEtapa
   );
 
-  let [resultadosObj, setResultadosObj] =
-    useState<ResultadosProps[]>(resultadoEtapaObj);
+  const resultadosObj =
+    rankingType.rankingType === "Geral" ? resultadoGeralObj : resultadoEtapaObj;
+  const headerLabel: string =
+    rankingType.rankingType === "Geral" ? "RANKING GERAL" : "ÚLTIMA ETAPA";
 
-  let headerLabel: string = "ÚLTIMA ETAPA";
-
-  if (rankingType.rankingType === "Geral") {
-    headerLabel = "RANKING GERAL";
-  }
-
-  //console.log(resultadosObj);
-  //setResultadosObj(ultimosResultadosGeral);
   /*
   const [resultadosDb, setResultadosDb] = useState<ResultadoPropsDb[]>([]);
 
