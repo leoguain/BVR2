@@ -111,9 +111,8 @@ export const CentralContainerH = styled.div`
 
 export const ContainerCarteiras = styled.div`
         display: flex;
-        width: 1000px;
         padding: 10px;
-        flex-direction: row;
+        flex-flow: row wrap;
         align-self: center;
         justify-content: center;
 
@@ -126,7 +125,7 @@ export const ContainerCarteiras = styled.div`
 `;
 
 export const ContainerCampeoes = styled.div`
-    width: 1000px;
+
     min-height: 70vh;
     display: flex;
     flex-flow: row wrap;
@@ -143,7 +142,6 @@ export const ContainerCampeoes = styled.div`
 `;
 
 export const ContainerPilotos = styled.div`
-    width: 1000px;
     min-height: 70vh;
     display: flex;
     flex-flow: row wrap;

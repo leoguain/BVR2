@@ -30,6 +30,8 @@ export const SubItemContainer = styled.div`
     display: flex;
     border-radius: 5px;
     align-items:center;
+    justify-content: center;
+    flex-flow: row wrap;
     gap: 5px;
     padding: 10px;
 
@@ -42,9 +44,15 @@ export const SubItemContainer = styled.div`
     }
 `;
 
+export const PairContainer = styled.div`
+    flex-flow: row wrap;
+    gap: 20px;
+`;
+
+
 export const InfoContainer = styled.div`
     display: flex;
-    width: ${props => props.inputWidth || "200px"};
+    width: ${props => props.inputWidth || "180px"};
     height: ${props => props.inputHeight || "70px"};
     flex-direction: column;
     border-radius: 5px;

@@ -348,8 +348,8 @@ export const GetRecordes = () => {
   }, []);
   */
 
-  let currentTrack = "";
-  let repeat = "N";
+  //let currentTrack = "";
+  //let repeat = "N";
 
   return (
     <MainContainerV>
@@ -359,7 +359,14 @@ export const GetRecordes = () => {
         de Corrida na Liga, por pista.
       </BVR_h3>
       <CentralContainerH>
-        {recordesObj.map(
+        <Recorde listRec={recordesObj} SetListRec={setRecordesObj} />
+      </CentralContainerH>
+    </MainContainerV>
+  );
+};
+
+/*
+{recordesObj.map(
           (
             {
               PistaEtapa,
@@ -387,8 +394,8 @@ export const GetRecordes = () => {
             return (
               <Recorde
                 key={index}
-                listDoc={recordesObj}
-                SetListDoc={setRecordesObj}
+                listRec={recordesObj}
+                SetListRec={setRecordesObj}
                 id={index}
                 pista={PistaEtapa}
                 campeonato={Campeonato}
@@ -407,10 +414,9 @@ export const GetRecordes = () => {
             );
           }
         )}
-      </CentralContainerH>
-    </MainContainerV>
-  );
-};
+
+
+        */
 
 export const GetPilotos = () => {
   const [pilotosObj, setPilotosObj] = useState<PilotosProps[]>(pilotos);

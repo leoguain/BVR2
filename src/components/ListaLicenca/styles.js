@@ -34,7 +34,7 @@ export const Container = styled.div`
 
 export const Card = styled.div`
         display:flex;
-        width: 300px;
+        width: 260px;
         min-height: 50vh;
         background: #1F1F1F;
         border-radius: 10px;  
@@ -117,7 +117,7 @@ export const Content = styled.div`
 
 export const Info = styled.div`
     display:flex;
-    width: 280px;
+    width: 240px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -128,7 +128,7 @@ export const Line = styled.div`
     background-color: ${props => props.inputColor || "none"};
     border-bottom: ${props => props.inputBottomBorder || "solid 1px white"}; 
     border-radius: ${props => props.inputBorder || "0px"};
-    width: 240px;
+    width: 220px;
     height:25px;
     align-items: center;
     justify-content: space-between;
