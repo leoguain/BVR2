@@ -10,18 +10,16 @@ const MainPage = () => {
   return (
     <Container>
       <HPColumn>
-        <HPTitle>HALL DA FAMA ATUALIZADO</HPTitle>
         <MainBanner />
-        <HPBottom>Mais um campeonato para Gustavo Viaro!</HPBottom>
-      </HPColumn>
-      <HPColumn>
-        <RankingBanner />
       </HPColumn>
       <HPColumn>
         <GetNoticias sizeType="Box" accessType="Default" />
         <HPTitle>Última Corrida: 17/11/2022</HPTitle>
         <YoutubeEmbed embedId="CM1qkWd0t3M" />
         <HPBottom>Acompanhe ao vivo, às quintas, na BVGtv!</HPBottom>
+      </HPColumn>
+      <HPColumn>
+        <RankingBanner />
       </HPColumn>
     </Container>
   );

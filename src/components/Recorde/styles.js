@@ -4,10 +4,13 @@ import styled, {css} from 'styled-components'
 export const MainContainer = styled.div`
     display: flex;
     border-radius: 5px;
+    width: fit-content;
+    justify-content: center;
 
     @media(max-width: 768px) {
   
         flex-direction: column;
+        width: fit-content;
     }
 `;
 
@@ -30,29 +33,30 @@ export const SubItemContainer = styled.div`
     display: flex;
     border-radius: 5px;
     align-items:center;
-    justify-content: center;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 5px;
-    padding: 10px;
+    padding: 5px;
 
     background-color: ${props => props.inputColor || "black"};
 
     @media(max-width: 768px) {
         flex-flow: row wrap;
         justify-content: center;
-        width:200px;
+        width:300px;
     }
 `;
 
 export const PairContainer = styled.div`
+    display: flex;
     flex-flow: row wrap;
-    gap: 20px;
+    gap: 5px;
 `;
 
 
 export const InfoContainer = styled.div`
     display: flex;
-    width: ${props => props.inputWidth || "180px"};
+    width: ${props => props.inputWidth || "200px"};
     height: ${props => props.inputHeight || "70px"};
     flex-direction: column;
     border-radius: 5px;
@@ -62,10 +66,9 @@ export const InfoContainer = styled.div`
     
     background-color: ${props => props.inputColor || "black"};
     
-
     @media(max-width: 768px) {
         flex-direction: row;
-        width: 200px;
+        width: 300px;
     }
 `;
 
@@ -82,7 +85,7 @@ export const BVR_h3 = styled.h3`
 
 
     @media(max-width: 768px) {
-        font-size: 1em;
+        font-size: 1.1em;
         font-weight: 600;
     }
 `;
@@ -93,7 +96,7 @@ export const BVR_h4= styled.h4`
     color: #fff;
 
     @media(max-width: 768px) {
-        font-size: 0.7em;
+        font-size: 0.8em;
         font-weight: 400;
         color: #fff;
     }

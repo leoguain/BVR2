@@ -41,22 +41,18 @@ export default function Recorde(props) {
                     return (
                         <MainContainer>
                             <ItemContainer inputMargin='20px'>
-                                <InfoContainer inputWidth="400px">
+                                <InfoContainer inputWidth="300px">
                                     <BVR_h3>{PistaEtapa}</BVR_h3>
-                                </InfoContainer>
-    
+                                </InfoContainer> 
                                 <SubItemContainer inputColor="#149B49">
-                                    
-                         
+                                    <PairContainer>
                                         <InfoContainer inputColor="#066F2F">
                                             <BVR_h3>
                                                 <BVR_span>Categoria</BVR_span><br></br>
                                                 {Categoria}<br></br>
                                                 <BVR_span>{Plataforma}</BVR_span>
                                             </BVR_h3>
-    
-                                            </InfoContainer>
-    
+                                        </InfoContainer>
                                             <InfoContainer inputColor="#149B49">
                                             <BVR_h3>
                                                 <BVR_span>Campeonato</BVR_span><br></br>
@@ -64,8 +60,8 @@ export default function Recorde(props) {
                                                 <BVR_span>{Ano}</BVR_span>
                                             </BVR_h3>
                                         </InfoContainer>
-                  
-                                        
+                                    </PairContainer>
+                                    <PairContainer>
                                         <InfoContainer>
                                             <BVR_h3 inputColor="#DE72DA">
                                                 <BVR_span>Pole Position</BVR_span><br></br>
@@ -73,7 +69,6 @@ export default function Recorde(props) {
                                                 {TempoPole}
                                             </BVR_h3>
                                         </InfoContainer>
-                                        
                                         <InfoContainer>
                                             <BVR_h3 inputColor="#DE72DA">
                                                 <BVR_span>Volta Mais Rápida</BVR_span><br></br>
@@ -81,12 +76,9 @@ export default function Recorde(props) {
                                                 {TempoVMR}
                                             </BVR_h3>
                                         </InfoContainer>
-   
-    
+                                    </PairContainer>
                                 </SubItemContainer>
-    
                             </ItemContainer>
-                            
                         </MainContainer>
                     )      
                 } else {
@@ -96,8 +88,8 @@ export default function Recorde(props) {
     
                                 <SubItemContainer inputColor="#149B49">
                                     
-                                 
-                                        <InfoContainer inputColor="#066F2F">
+                                <PairContainer>
+                                <InfoContainer inputColor="#066F2F">
                                             <BVR_h3>
                                                 <BVR_span>Categoria</BVR_span><br></br>
                                                 {Categoria}<br></br>
@@ -113,7 +105,12 @@ export default function Recorde(props) {
                                                 <BVR_span>{Ano}</BVR_span>
                                             </BVR_h3>
                                         </InfoContainer>
+                                </PairContainer>
+
+                                        
                               
+                                        <PairContainer>
+
                                         <InfoContainer>
                                             <BVR_h3 inputColor="#DE72DA">
                                                 <BVR_span>Pole Position</BVR_span><br></br>
@@ -121,7 +118,6 @@ export default function Recorde(props) {
                                                 {TempoPole}
                                             </BVR_h3>
                                         </InfoContainer>
-                                        
                                         <InfoContainer>
                                             <BVR_h3 inputColor="#DE72DA">
                                                 <BVR_span>Volta Mais Rápida</BVR_span><br></br>
@@ -129,7 +125,8 @@ export default function Recorde(props) {
                                                 {TempoVMR}
                                             </BVR_h3>
                                         </InfoContainer>
-                               
+
+                                    </PairContainer>
     
                                 </SubItemContainer>
     
@@ -142,114 +139,6 @@ export default function Recorde(props) {
             )}
         </>
     )
-
-    
-
-
-    if (props.repete ==="S") {
-        return (
-            <MainContainer>
-                <ItemContainer>
-                    <SubItemContainer inputColor="#149B49">
-                        
-                        <PairContainer>
-                            <InfoContainer inputColor="#066F2F">
-                                <BVR_h3>
-                                    <BVR_span>Categoria</BVR_span><br></br>
-                                    {props.categoria}<br></br>
-                                    <BVR_span>{props.plataforma}</BVR_span>
-                                </BVR_h3>
-
-                                </InfoContainer>
-
-                                <InfoContainer inputColor="#149B49">
-                                <BVR_h3>
-                                    <BVR_span>Campeonato</BVR_span><br></br>
-                                    {props.campeonato}<br></br>
-                                    <BVR_span>{props.ano }</BVR_span>
-                                </BVR_h3>
-                            </InfoContainer>
-                        </PairContainer>
-
-                        <PairContainer>
-                            <InfoContainer>
-                                <BVR_h3 inputColor="#DE72DA">
-                                    <BVR_span>Pole Position</BVR_span><br></br>
-                                    {props.pilotoPole}<br></br>
-                                    {props.tempoPole}
-                                </BVR_h3>
-                            </InfoContainer>
-                            
-                            <InfoContainer>
-                                <BVR_h3 inputColor="#DE72DA">
-                                    <BVR_span>Volta Mais Rápida</BVR_span><br></br>
-                                    {props.pilotoVmr}<br></br>
-                                    {props.tempoVmr}
-                                </BVR_h3>
-                            </InfoContainer>
-                        </PairContainer>
-
-                    </SubItemContainer>
-
-                </ItemContainer>
-                
-            </MainContainer>
-        )
-    } else {
-        return (
-            <MainContainer>
-                <ItemContainer inputMargin="10px">
-
-                    <InfoContainer inputWidth="400px">
-                        <BVR_h3>{props.pista}</BVR_h3>
-                    </InfoContainer>
-
-                    <SubItemContainer inputColor="#149B49">
-
-                        <PairContainer>
-                            <InfoContainer inputColor="#066F2F">
-                                <BVR_h3>
-                                    <BVR_span>Categoria</BVR_span><br></br>
-                                    {props.categoria}<br></br>
-                                    <BVR_span>{props.plataforma}</BVR_span>
-                                </BVR_h3>
-
-                                </InfoContainer>
-
-                                <InfoContainer inputColor="#149B49">
-                                <BVR_h3>
-                                    <BVR_span>Campeonato</BVR_span><br></br>
-                                    {props.campeonato}<br></br>
-                                    <BVR_span>{props.ano }</BVR_span>
-                                </BVR_h3>
-                            </InfoContainer>
-                        </PairContainer>
-
-                        <PairContainer>
-                            <InfoContainer>
-                                <BVR_h3 inputColor="#DE72DA">
-                                    <BVR_span>Pole Position</BVR_span><br></br>
-                                    {props.pilotoPole}<br></br>
-                                    {props.tempoPole}
-                                </BVR_h3>
-                            </InfoContainer>
-                            
-                            <InfoContainer>
-                                <BVR_h3 inputColor="#DE72DA">
-                                    <BVR_span>Volta Mais Rápida</BVR_span><br></br>
-                                    {props.pilotoVmr}<br></br>
-                                    {props.tempoVmr}
-                                </BVR_h3>
-                            </InfoContainer>
-                        </PairContainer>
-
-                    </SubItemContainer>
-
-                </ItemContainer>
-                
-            </MainContainer>
-        )
-    }
 }
 
 /*

@@ -174,12 +174,30 @@ export const Container = styled.div`
     }      
 `;
 
+export const ContainerMainBanner = styled.div`
+    min-height: 70vh;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 20px;
+    align-items:top;
+    justify-content: center;
+    gap: 30px;
+
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }      
+`;
+
 export const HPColumn = styled.div`
         display: flex;
         min-height: 60vh;
         align-items:top;
         flex-direction: column;
-        justify-content: center;
+        justify-content: top;
 `;
 
 export const HPTitle = styled.div`

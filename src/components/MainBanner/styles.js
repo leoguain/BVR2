@@ -4,13 +4,15 @@ import styled from 'styled-components'
 //url(${banner1});
 //border-radius:10px;
 
-const Container = styled.div`
-    background: url(${props => props.inputURL || "none"});
-    background-size: cover;
-    display: flex;
-    width: 400px;
-    height:500px;
-    align-self:center;
-`;
+//background: url(${props => props.inputURL || "none"});
+//background-size: cover;
 
-export default Container;
+export const Container = styled.div`
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 10px;
+    
+    align-items: center;
+    overflow: hidden;
+`;

@@ -1,5 +1,5 @@
 body{
-  background-color: #1b1b1b;
+  background-image: linear-gradient(to right,#1c1c1c,#505050,#484848);
   color: white;
 }
 
@@ -8,7 +8,8 @@ body::-webkit-scrollbar, div::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
+  background: transparent;      
+  border-radius: 10px;  /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {

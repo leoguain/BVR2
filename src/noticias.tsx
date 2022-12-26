@@ -15,7 +15,7 @@ export const noticias = [
     title: "Novas silhuetas de carros anunciadas",
     data: "10/12/2022",
     texto:
-      "Como de costume, Kazunori Yamauchi postou ontem a noite em seu twitter uma imagem escura dos carros que virão no próximo update.",
+      "Como de costume, Kazunori Yamauchi postou ontem a noite em seu twitter mais uma imagem com as silhuetas dos carros que virão no próximo update.",
     image: "",
     url: "https://www.instagram.com/p/Cl_Z-sjusWo/",
   },

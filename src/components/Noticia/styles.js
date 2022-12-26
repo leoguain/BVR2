@@ -19,6 +19,7 @@ export const BVR_h3 = styled.h3`
 export const BVR_a = styled.a`
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover{
         color: "#2AC868";
@@ -53,7 +54,7 @@ export const ContainerBox = styled.div`
     align-items: center;
     align-self: center;
     width: 360px;
-    height:220px;
+    height:230px;
     padding: 10px;
     margin-bottom: 30px;
     overflow: auto;
@@ -69,6 +70,7 @@ export const ContainerBox = styled.div`
 
 export const ContainerNoticia = styled.div`
     justify-content: center;
+    
 
     @media(max-width: 768px) {
         width: 360px
@@ -82,8 +84,10 @@ export const ImageBox = styled.div `
     height:100px;
 `;
 
+//background-color: #149B49;
 export const DateBox = styled.div `
-    background-color: #149B49;
+    background-image: linear-gradient(to right,#149B49,#056A2D);
+    
     border-radius: 10px 20px 0px 0px;
     align-items: center;
     justify-content: center;
@@ -97,7 +101,7 @@ export const ContentBox = styled.div `
 
     border-radius:10px;
     flex-direction: column;
-    background-color: #5b5b5b;
+    background-image: linear-gradient(to right,#2b2b2b, #000);
     align-self: center;
     width: 330px;
     margin-bottom: 10px;
@@ -122,13 +126,14 @@ export const TextBox = styled.div `
 export const LinkBox = styled.div`
     height:25px;
     font-size: 18px;
-    background-color: #149B49;
-    border: solid 2px #149B49;
+    text-decoration: none;
+    background-image: linear-gradient(to right,#149B49,#056A2D);
+    border: solid 2px #056A2D;
     border-radius: 0px 0px 10px 10px;
 
     &:hover{
 
-        border: solid 2px lightgreen;
+        border: solid 2px #22AF5A;
     }
 `;
 
