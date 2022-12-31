@@ -101,7 +101,7 @@ export const ContentBox = styled.div `
 
     border-radius:10px;
     flex-direction: column;
-    background-image: linear-gradient(to right,#2b2b2b, #000);
+    background-image: linear-gradient(to right,#272727, #000);
     align-self: center;
     width: 330px;
     margin-bottom: 10px;
