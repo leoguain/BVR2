@@ -11,8 +11,26 @@ export type NoticiasProps = {
 
 export const noticias = [
   {
+    id: "8",
+    title: "Inscrições abertas para o JGTC 90s!",
+    data: "06/01/2023",
+    texto:
+      "Estão abertas as inscrições para o primeiro campeonato da Liga BVR em 2023: o  JGTC 90s! Este campeonato será composto por 8 etapas semanais. O regulamento já está online, clique abaixo e veja ele no nosso setor de Documentos",
+    image: "",
+    url: "https://ligabvr.com.br/documentos",
+  },
+  {
+    id: "7",
+    title: "Liga BVR começando 2023 com força!",
+    data: "06/01/2023",
+    texto:
+      "Seja bem-vindo ao novo site da Liga BVR! Aqui você acompanhará os resultados de todos os campeonatos desde a temporada 2021, incluindo estatísticas de pilotos, e os recordes de volta por categoria! Isso além de novas features que estão por vir. Teremos muitas atualizações durante o ano! Que tal começar o tour vendo os resultados de campeonatos? Clique abaixo:",
+    image: "",
+    url: "https://ligabvr.com.br/campeonatos",
+  },
+  {
     id: "6",
-    title: "Novas silhuetas de carros anunciadas",
+    title: "Novas silhuetas de carros anunciadas!",
     data: "10/12/2022",
     texto:
       "Como de costume, Kazunori Yamauchi postou ontem a noite em seu twitter mais uma imagem com as silhuetas dos carros que virão no próximo update.",
@@ -21,7 +39,7 @@ export const noticias = [
   },
   {
     id: "5",
-    title: "Atualização 1.26 chega recheada de conteúdo",
+    title: "Atualização 1.26 chega recheada de conteúdo!",
     data: "24/11/2022",
     texto:
       "Carros novos, pista nova, enquete cheia de prêmios, atualização do modo online! Essas são algumas das novidades da nova atualização do Gran Turismo 7. Lançada hoje, a atualização de aniversário da franquia rendeu um vídeo com muitas coisas novas. ",
@@ -30,7 +48,7 @@ export const noticias = [
   },
   {
     id: "4",
-    title: "Gustavo Viaro campeão do Nissan Silvia Kup",
+    title: "Gustavo Viaro campeão do Nissan Silvia Kup!",
     data: "21/11/2022",
     texto:
       "Mesmo não vencendo a última etapa, Gustavo Viaro da CCGTBR se consagrou campeão do Nissan Silvia Kup. É o quinto título do gaúcho na Liga BVR.",
@@ -39,7 +57,7 @@ export const noticias = [
   },
   {
     id: "3",
-    title: "Fabiano Furini vence em Suzuka",
+    title: "Fabiano Furini vence em Suzuka!",
     data: "19/11/2022",
     texto:
       "Fabiano Furini da SpeedBr vence a última etapa do Nissan Silvia Kup. Com o resultado, o gaúcho se projeta para a terceira posição no ranking geral. Os resultados serão confirmados oficialmente na próxima segunda-feira.",
@@ -48,7 +66,7 @@ export const noticias = [
   },
   {
     id: "2",
-    title: "Exploit de teleport em Lago Maggiore",
+    title: "Exploit de teleport em Lago Maggiore!",
     data: "18/11/2022",
     texto:
       "Está difícil vencer a última missão de Endurance em Lago Maggiore? Seus problemas acabaram!! Confira este exploit que está salvando a vida de muita gente.",
